@@ -19,10 +19,9 @@ const NavLinks = styled.div<BurgerProps>`
   list-style: none;
   width: ${(props) => (props.open ? "100%" : 0)};
   opacity: ${(props) => (props.open ? 1 : 0)};
-  transform: translateZ(0);
 
   transition-property: opacity, width;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-delay: 0.1s;
   transition-timing-function: ease-out;
   will-change: transform;
@@ -36,17 +35,14 @@ const List = styled.ul<BurgerProps>`
   transition: width 0.2s;
   bottom: 50%;
   right: 0;
-  transform: translate(-50%, -50%) translateZ(0);
+  transform: translate(-50%, -50%);
   font-size: clamp(0.3rem, 1.2rem, 2rem);
 
   > li {
     :first-child {
       margin: 2rem auto;
       opacity: ${(p) => (p.open ? "1" : "0")};
-      transform: ${(p) =>
-        p.open
-          ? "translateX(0) translateZ(0)"
-          : "translateX(30px) translateZ(0)"};
+      transform: ${(p) => (p.open ? "translateX(0) " : "translateX(30px) ")};
       will-change: transform;
       transition: opacity 100ms 500ms ease-out, transform 300ms 500ms ease-out;
     }
@@ -54,10 +50,7 @@ const List = styled.ul<BurgerProps>`
       margin: 2rem auto;
 
       opacity: ${(p) => (p.open ? "1" : "0")};
-      transform: ${(p) =>
-        p.open
-          ? "translateX(0) translateZ(0)"
-          : "translateX(30px) translateZ(0)"};
+      transform: ${(p) => (p.open ? "translateX(0) " : "translateX(30px) ")};
       will-change: transform;
       transition: opacity 100ms 600ms ease-out, transform 300ms 600ms ease-out;
     }
@@ -65,33 +58,22 @@ const List = styled.ul<BurgerProps>`
       margin: 2rem auto;
 
       opacity: ${(p) => (p.open ? "1" : "0")};
-      transform: ${(p) =>
-        p.open
-          ? "translateX(0) translateZ(0)"
-          : "translateX(30px) translateZ(0)"};
+      transform: ${(p) => (p.open ? "translateX(0)" : "translateX(30px)")};
       will-change: transform;
       transition: opacity 100ms 700ms ease-out, transform 300ms 700ms ease-out;
     }
     :nth-child(4) {
       margin: 2rem auto;
-
       opacity: ${(p) => (p.open ? "1" : "0")};
       will-change: transform;
-      transform: ${(p) =>
-        p.open
-          ? "translateX(0) translateZ(0)"
-          : "translateX(30px) translateZ(0)"};
+      transform: ${(p) => (p.open ? "translateX(0)" : "translateX(30px)")};
       transition: opacity 100ms 800ms ease-out, transform 300ms 800ms ease-out;
     }
     :nth-child(5) {
       margin: 2rem auto;
-
       opacity: ${(p) => (p.open ? "1" : "0")};
       will-change: transform;
-      transform: ${(p) =>
-        p.open
-          ? "translateX(0) translateZ(0)"
-          : "translateX(30px) translateZ(0)"};
+      transform: ${(p) => (p.open ? "translateX(0)" : "translateX(30px)")};
       transition: opacity 100ms 800ms ease-out, transform 300ms 800ms ease-out;
     }
   }

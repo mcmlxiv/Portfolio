@@ -27,7 +27,7 @@ export const AboutList = styled.div`
 `;
 
 export const ProjectButton = styled.button<dark>`
-  ${tw`  lg:px-10 lg:py-4 text-sm px-28 py-2 lg:text-lg font-semibold tracking-wider  lg:mr-4 lg:mb-0 mb-4 rounded-lg transition duration-300 ease-in-out shadow-lg `}
+  ${tw`  lg:px-10 lg:py-4 text-sm px-24 py-2 lg:text-lg font-semibold tracking-wider  lg:mr-4 lg:mb-0 mb-6 rounded-lg transition duration-300 ease-in-out shadow-lg max-w-full`}
 
   ${(p) =>
     p.darkMode
@@ -49,7 +49,7 @@ export const ProjectButton = styled.button<dark>`
   }`};
 `;
 export const ProjectAltButton = styled.button<dark>`
-  ${tw`  lg:px-10 lg:py-4 text-sm px-28 py-2 lg:text-lg font-semibold tracking-wider  rounded-lg transition duration-300 ease-in-out shadow-lg`}
+  ${tw`  lg:px-10 lg:py-4 text-sm px-24 py-2 lg:text-lg font-semibold tracking-wider rounded-lg transition duration-300 ease-in-out shadow-lg max-w-full`}
 
   ${(p) =>
     p.darkMode

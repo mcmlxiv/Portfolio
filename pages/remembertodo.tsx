@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import tw, { styled } from "twin.macro";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
@@ -20,7 +20,7 @@ import {
   RememberTodoStack,
   RememberTodoStackCont,
 } from "../text/aboutMe";
-import HeroImg, { HeroImgMockUp, url } from "../components/HeroImg";
+import { HeroImgMockUp, url } from "../components/HeroImg";
 import { Dot } from "../components/StyledComps";
 
 import { keyframes } from "styled-components";
@@ -32,8 +32,8 @@ import {
   SiMaterialUi,
   SiHeroku,
 } from "react-icons/si";
-import { Head, RememberContainer } from "../components/StyledComps";
-import { dark, darker } from "../types.models";
+import { RememberContainer } from "../components/StyledComps";
+import { darker } from "../types.models";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Image.module.css";
@@ -183,7 +183,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           <div>
             <h1
               tw={
-                "text-lg flex flex-col font-semibold  mb-4 lg:text-5xl min-h-full "
+                "text-lg flex flex-col font-semibold  mb-8 lg:text-5xl min-h-full "
               }
             >
               Project Purpose and Goal.
@@ -202,7 +202,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           <div>
             <h1
               tw={
-                "text-lg flex flex-col font-semibold  my-4 lg:text-5xl min-h-full "
+                "text-lg flex flex-col font-semibold  my-8 lg:text-5xl min-h-full "
               }
             >
               Stack and Explanation
@@ -235,7 +235,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           <div>
             <h1
               tw={
-                "text-lg flex flex-col font-semibold  my-4 lg:text-5xl min-h-full "
+                "text-lg flex flex-col font-semibold  my-8 lg:text-5xl min-h-full "
               }
             >
               Problems and Though Process
@@ -254,7 +254,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           <div>
             <h1
               tw={
-                "text-lg flex flex-col font-semibold  mb-4 lg:text-5xl min-h-full "
+                "text-lg flex flex-col font-semibold  my-8 lg:text-5xl min-h-full "
               }
             >
               Lessons Learned
