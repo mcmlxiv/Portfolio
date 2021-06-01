@@ -10,11 +10,13 @@ import Fade from "react-reveal/Fade";
 
 import {
   RememberTodoLessons,
+  RememberTodoLessonsCont,
   RememberTodoProblems,
   RememberTodoProblemsCont,
   RememberTodoProject,
   RememberTodoProjectCont,
   RememberTodoPurpose,
+  RememberTodoPurposeCont,
   RememberTodoStack,
   RememberTodoStackCont,
 } from "../text/aboutMe";
@@ -109,11 +111,9 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
   const RememberHeader = () => {
     return (
       <div
-        tw={
-          "flex flex-col flex-1 items-start gap-4  dark:text-whiteCream text-black"
-        }
+        tw={"flex flex-col flex-1 items-start  dark:text-whiteCream text-black"}
       >
-        <div>
+        <div tw={"mb-4"}>
           <HeaderR>
             Remember
             <br />
@@ -122,23 +122,19 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
         </div>
         <Fade bottom>
           <AboutList>
-            <p>{RememberTodoProject}</p>
+            <p tw={"mb-4"}>{RememberTodoProject}</p>
             <p>{RememberTodoProjectCont}</p>
           </AboutList>
         </Fade>
         <Fade bottom>
-          <div
-            tw={
-              "flex flex-1 lg:gap-20 gap-8 justify-between h-full py-16 w-full lg:w-1/4"
-            }
-          >
+          <div tw={"flex flex-1 justify-between h-full py-16 w-full lg:w-1/4"}>
             <div>
               <h3 tw={"lg:text-xl "}>Type</h3>
               <div tw={"dark:text-gray-200 text-gray-500"}>
                 <h5>Personal</h5>
               </div>
             </div>
-            <div>
+            <div tw={"mx-6"}>
               <h3 tw={"lg:text-xl"}>Stack</h3>
               <div tw={"dark:text-gray-200 text-gray-500 leading-loose"}>
                 <h5>TypeScript</h5>
@@ -195,9 +191,10 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           </div>
         </Fade>
         <Fade bottom>
-          <div tw={"flex flex-col flex-1 gap-8"}>
+          <div tw={"flex flex-col flex-1 "}>
             <AboutList>
-              <p>{RememberTodoPurpose}</p>
+              <p tw={"mb-4"}>{RememberTodoPurpose}</p>
+              <p>{RememberTodoPurposeCont}</p>
             </AboutList>
           </div>
         </Fade>
@@ -205,7 +202,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           <div>
             <h1
               tw={
-                "text-lg flex flex-col font-semibold  mb-4 lg:text-5xl min-h-full "
+                "text-lg flex flex-col font-semibold  my-4 lg:text-5xl min-h-full "
               }
             >
               Stack and Explanation
@@ -214,7 +211,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
         </Fade>
         <Fade bottom>
           <div tw={"flex flex-col flex-1 gap-8"}>
-            <div tw={"flex flex-1 justify-between text-2xl lg:text-6xl"}>
+            <div tw={"flex flex-1 justify-between text-2xl lg:text-6xl my-4"}>
               <DiMongodb />
               <DiReact />
               <DiNodejs />
@@ -224,7 +221,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
               <SiMaterialUi />
             </div>
             <AboutList>
-              <p>{RememberTodoStack}</p>
+              <p tw={"my-4"}>{RememberTodoStack}</p>
             </AboutList>
             <AboutList>
               <p>{RememberTodoStackCont}</p>
@@ -238,15 +235,15 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           <div>
             <h1
               tw={
-                "text-lg flex flex-col font-semibold  mb-4 lg:text-5xl min-h-full "
+                "text-lg flex flex-col font-semibold  my-4 lg:text-5xl min-h-full "
               }
             >
               Problems and Though Process
             </h1>
           </div>
-          <div tw={"flex flex-col flex-1 gap-8"}>
+          <div tw={"flex flex-col flex-1 "}>
             <AboutList>
-              <p>{RememberTodoProblems}</p>
+              <p tw={"my-4"}>{RememberTodoProblems}</p>
             </AboutList>
             <AboutList>
               <p>{RememberTodoProblemsCont}</p>
@@ -265,7 +262,8 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           </div>
           <div tw={"flex flex-col flex-1 gap-8"}>
             <AboutList>
-              <p>{RememberTodoLessons}</p>
+              <p tw={"my-4"}>{RememberTodoLessons}</p>
+              <p>{RememberTodoLessonsCont}</p>
             </AboutList>
           </div>
         </Fade>

@@ -28,9 +28,11 @@ export const RememberTodoProject = `Remember ToDo! is a TS React app built for s
 export const RememberTodoProjectCont = `This SPA required a lot of time and deep research to implement. It is my first true deep dive in to a full stack application. It is hosted on Vercel (client) and Heroku (server). I hope you may find it useful to you as much as my family and friends did... They loved it!`;
 
 export const RememberTodoPurpose = `This project included 4 phases and iterations of the site. Phase 1 simply creating the front-end UI structure and elements with and storing the to dos created within memory.
-Phase 2 was much larger as it involved storing the user information within local storage and extending it to allow for user sign ups and sign ins. Phase 3 was storing the data and processing it on a local server 
-and allowing for the frontend to consume the data from the locally created API. Phase 4 and most difficult was establishing a completely online service where the backend of the app is hosted on Heroku and the frontend on Vercel then connecting the two for a convenient and quick user experience.
+Phase 2 was much larger as it involved storing the user information within local storage and extending it to allow for user sign ups and sign ins. 
 `;
+
+export const RememberTodoPurposeCont = `Phase 3 was storing the data and processing it on a local server 
+and allowing for the frontend to consume the data from the locally created API. Phase 4 and most difficult was establishing a completely online service where the backend of the app is hosted on Heroku and the frontend on Vercel then connecting the two for a convenient and quick user experience.`;
 
 export const RememberTodoStack = `Using CRA (Create React App) seemed like the clearest choice for this web app. As it is an SPA that utilizes graphQL/Apollo to connect to a hosted MongoDB database. Typescript
  was chosen for its ability to give the project type-safety and to ensure future iterations are more robust and quick. `;
@@ -42,5 +44,6 @@ was my first big app undertaking and it really provided me with a better sense f
 export const RememberTodoProblemsCont = `After learning more and more about my issues within this app I have grown incredibly, and understood not only my perspective but others as well. I have made a bigger
 effort to ensure my code is more readable and reusable and utilized props and state in many places reducing repeated code.`;
 export const RememberTodoLessons = `There are so many many things I have learnt doing this app, it is my first big react app. I struggled a great deal with many new concepts but I did it because I am fascinated with
-creating unique things that others can use and provide value for them. Concepts like Hooks, Git management, API construction and integration and many more pushed me to research and test through night and day. I have learnt many important
+creating unique things that others can use and provide value for them. `;
+export const RememberTodoLessonsCont = `Concepts like Hooks, Git management, API construction and integration and many more pushed me to research and test through night and day. I have learnt many important
 lessons and they will push me to be a better engineer.`;
