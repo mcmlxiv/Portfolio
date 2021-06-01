@@ -38,18 +38,6 @@ const Words = styled.h2<dark>`
   transform: translateZ(0);
   will-change: auto;
   animation: 1s ease-out ${fadeIn};
-  ${(p) =>
-    p.darkMode
-      ? `background-repeat: no-repeat;
-  background-image: url("https://products.ls.graphics/mesh-gradients/images/14.-Prim_1.jpg");
-  background-size: 200%;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: bg 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
-  );`
-      : `
-  );`};
 `;
 const IndexContainer = styled.div`
   ${tw`   dark:text-whiteCream text-black `};
@@ -71,7 +59,7 @@ export const IndexHeader = () => {
         <IndexContainer>
           <TypeWriter />
           <Words {...{ darkMode }}>
-            "Head up, Keep forward."
+            <p tw={"text-lg"}>"Head up, Keep forward."</p>
             <div tw={"flex flex-1 mt-8 items-center"}>
               <Link href="/">
                 <a onClick={smoothScrollToProj}>
