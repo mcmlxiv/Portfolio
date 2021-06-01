@@ -135,13 +135,13 @@ const Footer = () => {
             </div>
           </div>
         </FooterSkills>
-        <div tw={"flex flex-1 gap-2 flex-col w-40 md:max-h-10"}>
-          <div tw={"cursor-pointer hover:font-semibold"}>
+        <div tw={"flex flex-1 flex-col w-40 md:max-h-10"}>
+          <div tw={"cursor-pointer mb-2  hover:font-semibold"}>
             <Link href="tel:+866 0909 316 039 ">
               <a>+866 0909 316 039</a>
             </Link>
           </div>
-          <div tw={"cursor-pointer hover:font-semibold"}>
+          <div tw={"cursor-pointer mb-2  hover:font-semibold"}>
             <Link href="mailto:enpower56@gmail.com">
               <a>enpower56@gmail.com</a>
             </Link>

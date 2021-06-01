@@ -5,6 +5,10 @@ import tw, { styled } from "twin.macro";
 const TypeContainer = styled.div`
   ${tw`   text-4xl flex flex-col font-semibold  relative mb-4 lg:text-8xl  min-h-0 `};
   max-height: 2.5rem;
+  margin-bottom: 15rem;
+  @media only screen and (min-width: 960px) {
+    margin-bottom: 20rem;
+  }
 `;
 const TypeWriter = () => {
   return (

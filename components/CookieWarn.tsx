@@ -3,13 +3,13 @@ import tw, { styled } from "twin.macro";
 import { openC } from "../types.models";
 
 const CookieWrapper = styled.section<openC>`
-  ${tw`   flex-1  justify-around items-center bg-gray-300  p-4 max-h-24  font-light `}
+  ${tw`   flex-1  justify-around items-center bg-gray-300  lg:p-4 p-2 max-h-24 text-black font-light `}
   grid-column:full-start/full-end;
 
   display: ${(p) => (p.open ? `none` : `flex`)};
 `;
 const CloseCookie = styled.div`
-  ${tw`   px-8 fill-current text-gray-600 hover:text-black cursor-pointer`}
+  ${tw`   lg:px-8 pr-2 fill-current text-gray-600 hover:text-black cursor-pointer`}
 `;
 
 const CookieWarn = () => {

@@ -35,7 +35,6 @@ const Words = styled.h2<dark>`
   flex-direction: column;
   flex: 1;
   align-items: start;
-  gap: 8rem;
   transform: translateZ(0);
   will-change: auto;
   animation: 1s ease-out ${fadeIn};
@@ -58,10 +57,6 @@ const IndexContainer = styled.div`
   flex-direction: column;
   flex: 1;
   align-items: start;
-  gap: 15rem;
-  @media only screen and (min-width: 960px) {
-    gap: 20rem;
-  }
 `;
 export const IndexHeader = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -77,7 +72,7 @@ export const IndexHeader = () => {
           <TypeWriter />
           <Words {...{ darkMode }}>
             "Head up, Keep forward."
-            <div tw={"flex flex-1 gap-4 items-center"}>
+            <div tw={"flex flex-1 mt-8 items-center"}>
               <Link href="/">
                 <a onClick={smoothScrollToProj}>
                   <ProjectButton {...{ darkMode }}>Projects</ProjectButton>
@@ -154,10 +149,10 @@ export const ContactHeader = () => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <div tw={"flex flex-col flex-1 gap-80"}>
+    <div tw={"flex flex-col flex-1 mb-72"}>
       <div
         tw={
-          "flex flex-col flex-1 items-start gap-4  dark:text-whiteCream text-black"
+          "flex flex-col flex-1 items-start mb-20  dark:text-whiteCream text-black"
         }
       >
         <div>
@@ -181,11 +176,9 @@ export const ContactHeader = () => {
 export const ArtHeader = () => {
   return (
     <div
-      tw={
-        "flex flex-col flex-1 items-start gap-4  dark:text-whiteCream text-black"
-      }
+      tw={"flex flex-col flex-1 items-start dark:text-whiteCream text-black"}
     >
-      <div>
+      <div tw={"my-4"}>
         <Head>ART</Head>
       </div>
       <AboutList>
@@ -199,16 +192,16 @@ export const NotFoundHeader = () => {
   return (
     <div
       tw={
-        "flex flex-col flex-1 items-start gap-4 overflow-hidden dark:text-whiteCream text-black"
+        "flex flex-col flex-1 items-start  overflow-hidden dark:text-whiteCream text-black"
       }
     >
-      <div>
+      <div tw={"my-4"}>
         <Head>404</Head>
       </div>
       <h1 tw={"font-semibold text-center"}>
         Taking you back to my homepage...
       </h1>
-      <div tw={"flex flex-col flex-1 gap-4"}>
+      <div tw={"flex flex-col flex-1 my-4"}>
         <p>{notFound}</p>
       </div>
     </div>

@@ -71,13 +71,9 @@ export const IndexMain = () => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <div
-      tw={"py-9 flex flex-col flex-1 gap-24 "}
-      className={"first"}
-      id={"main"}
-    >
+    <div tw={"py-9 flex flex-col flex-1 "} className={"first"}>
       <Fade bottom>
-        <div>
+        <div tw={" mb-24"} id={"main"}>
           <h1
             tw={
               "text-lg flex flex-col font-semibold   mb-2 lg:mb-4 lg:text-8xl text-4xl min-h-full "
@@ -88,7 +84,7 @@ export const IndexMain = () => {
         </div>
       </Fade>
       <Fade bottom>
-        <div tw={"flex flex-col flex-1 gap-8"}>
+        <div tw={"flex flex-col flex-1"}>
           <AboutList>
             <p>{aboutMe}</p>
             <br />
@@ -102,17 +98,17 @@ export const IndexMain = () => {
         </div>
       </Fade>
       <Fade bottom>
-        <div id={"projects"}>
+        <div id={"projects"} tw={"my-16"}>
           <h1
             tw={
-              "text-lg flex flex-col font-semibold   mb-2 lg:mb-4 lg:text-8xl text-4xl min-h-full text-right"
+              "text-lg flex flex-col font-semibold  lg:text-8xl text-4xl min-h-full text-right"
             }
           >
             My <br />
             Projects.
           </h1>
         </div>
-        <div tw={"flex flex-col flex-1 gap-8 text-right"}>
+        <div tw={"flex flex-col flex-1  text-right"}>
           <AboutList>
             <p tw={"text-right"}>{aboutMeProjects}</p>
             <p tw={"text-right"}>{portfolioHome}</p>
@@ -120,10 +116,10 @@ export const IndexMain = () => {
         </div>
       </Fade>
       <Fade bottom>
-        <div tw={"flex flex-col flex-1 gap-8"}>
+        <div tw={"flex flex-col flex-1"}>
           <Link href="/remembertodo">
             <a>
-              <h3 tw={"text-lg  font-semibold  mb-4 lg:text-4xl min-h-full  "}>
+              <h3 tw={"text-lg  font-semibold  my-4 lg:text-4xl min-h-full  "}>
                 Remember Todo!
               </h3>
             </a>
@@ -131,7 +127,7 @@ export const IndexMain = () => {
           <HeroImgProject />
           <div
             tw={
-              "justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify w-80"
+              "justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify w-80 mb-8"
             }
           >
             <p>{RememberTodo}</p>
@@ -257,12 +253,9 @@ const publicIds = [
 
 export const ArtMain = () => {
   return (
-    <div tw={" flex flex-col flex-1 gap-24 "} className={"first"} id={"main"}>
-      <div tw={"flex flex-col flex-1 gap-8"}>
-        <div
-          tw={"py-9 flex flex-col flex-1 gap-24 lg:px-10 "}
-          className={"first"}
-        >
+    <div tw={" flex flex-col flex-1 my-24 "} className={"first"} id={"main"}>
+      <div tw={"flex flex-col flex-1 my-8"}>
+        <div tw={"py-9 flex flex-col flex-1  lg:px-10 "} className={"first"}>
           {publicIds.map((id) => {
             const url = buildUrl(id, {
               cloud: {
@@ -270,7 +263,7 @@ export const ArtMain = () => {
               },
             });
             return (
-              <div key={id}>
+              <div key={id} tw={"my-24"}>
                 <Fade bottom>
                   <div tw={"flex items-center justify-center cursor-pointer"}>
                     <h2>{id}</h2>

@@ -18,7 +18,7 @@ export const fadeIn = keyframes`
 `;
 
 export const AboutList = styled.div`
-  ${tw`  flex flex-1 flex-col lg:flex-row gap-6 justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify `};
+  ${tw`  flex flex-1 flex-col lg:flex-row gap-6 justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify my-8`};
 
   width: 100%;
   @media only screen and (min-width: 960px) {
@@ -27,7 +27,7 @@ export const AboutList = styled.div`
 `;
 
 export const ProjectButton = styled.button<dark>`
-  ${tw`  lg:px-10 lg:py-4 text-sm px-6 py-2 lg:text-lg font-semibold tracking-wider  rounded-lg transition duration-300 ease-in-out shadow-lg `}
+  ${tw`  lg:px-10 lg:py-4 text-sm px-6 py-2 lg:text-lg font-semibold tracking-wider  mr-4 rounded-lg transition duration-300 ease-in-out shadow-lg `}
 
   ${(p) =>
     p.darkMode
@@ -252,7 +252,7 @@ export const ListEle = styled.div`
 `;
 
 export const HeroWrapProj = styled.div`
-  ${tw` relative rounded `};
+  ${tw` relative rounded my-8 `};
 
   @media only screen and (min-width: 960px) {
     width: 40%;

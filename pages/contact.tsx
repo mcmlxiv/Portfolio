@@ -189,7 +189,7 @@ const ContactMain = () => {
 };
 
 const MainWrapper = styled.div<dark>`
-  ${tw`flex-1 flex flex-col justify-center items-center dark:text-whiteCream text-black xl:px-72 px-8 py-5`}
+  ${tw`flex-1 flex flex-col justify-center items-center dark:text-whiteCream text-black xl:px-72 py-5`}
   grid-column:full-start/full-end;
 `;
 
