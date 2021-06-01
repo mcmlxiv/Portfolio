@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Link from "next/link";
-import tw, { styled } from "twin.macro";
+import  { styled } from "twin.macro";
 import {
   portfolioHome,
   RememberTodo,
@@ -256,7 +256,7 @@ const publicIds = [
 ];
 
 export const ArtMain = () => {
-  const cloudName = process.env.NEXT_PUBLIC_IMG_ID;
+  const cloudID = process.env.NEXT_PUBLIC_IMG_ID;
   return (
     <div tw={" flex flex-col flex-1 gap-24 "} className={"first"} id={"main"}>
       <div tw={"flex flex-col flex-1 gap-8"}>
@@ -267,7 +267,7 @@ export const ArtMain = () => {
           {publicIds.map((id) => {
             const url = buildUrl(id, {
               cloud: {
-                cloudName,
+                cloudName: cloudID,
               },
             });
             return (

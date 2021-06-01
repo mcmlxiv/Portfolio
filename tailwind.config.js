@@ -1,7 +1,6 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
+
 module.exports = {
-  purge: [],
+  purge: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     screens: {

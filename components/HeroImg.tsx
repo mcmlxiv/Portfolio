@@ -10,18 +10,17 @@ import {
   DotBox,
   HeroWrap,
   HeroWrapMock,
-  HeroWrapProj,
 } from "./StyledComps";
 
-const cloudName = process.env.NEXT_PUBLIC_IMG_ID;
+const cloudID = process.env.NEXT_PUBLIC_IMG_ID;
 export const url = buildUrl("remembertodoscreen_t668li", {
   cloud: {
-    cloudName,
+    cloudName: cloudID,
   },
 });
 const urlM = buildUrl("iPhoneMockup", {
   cloud: {
-    cloudName,
+    cloudName: cloudID,
   },
 });
 
