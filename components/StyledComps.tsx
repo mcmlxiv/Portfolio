@@ -214,73 +214,6 @@ export const RememberAboutList = styled.div`
   }
 `;
 
-export const FooterWrapper = styled.div<dark>`
-  ${tw`flex-1 flex flex-col justify-center items-center dark:text-whiteCream text-black  xl:px-72 border-t-2 py-16 `}
-  grid-column:full-start/full-end;
-
-  background-color: ${(p) =>
-    p.darkMode
-      ? `
-rgba(44, 44, 44, 0.5)
-`
-      : `
-      rgba(227, 227, 227, 0.5)
-`};
-  border-color: ${(p) =>
-    p.darkMode
-      ? `
-rgba(44, 44, 44, 0.5)
-`
-      : `
-      rgba(237, 237, 237, 0.5)
-`}; ;
-`;
-export const FooterContainer = styled.div`
-  ${tw`flex flex-col px-9 h-3/4 text-xs font-medium gap-8 `}
-  height:100%;
-  width: 100%;
-  margin: 0 auto;
-`;
-export const FooterBase = styled.div`
-  ${tw`flex flex-col  w-full list-none  `}
-`;
-export const FooterMain = styled.div`
-  ${tw`grid grid-flow-col grid-cols-2  w-full h-full `}
-  font-size: clamp(0.3rem, 0.8rem, 1.5rem);
-`;
-
-export const FooterCopy = styled.div`
-  ${tw`flex justify-between items-center flex-row py-2`};
-
-  font-size: clamp(0.3rem, 0.65rem, 1.5rem);
-`;
-export const MovingLine = styled.hr<dark>`
-  ${tw`  border-2 rounded   `}
-  width:0;
-  opacity: 0;
-  transition: all 0.2s ease-out;
-  border-color: ${(p) => (p.darkMode ? `white` : `black`)};
-`;
-export const FooterListEle = styled.li`
-  &:hover ${MovingLine} {
-    width: 100%;
-    opacity: 1;
-  }
-`;
-
-export const FooterSkills = styled.div`
-  display: none;
-  @media only screen and (min-width: 768px) {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    height: 100%;
-
-    gap: 1rem;
-    max-height: 10rem;
-  }
-`;
-
 export const FullMovingLine = styled.hr<dark>`
   ${tw`  border-2 rounded   `}
   width:0;
@@ -303,6 +236,13 @@ export const FullList = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
+`;
+const MovingLine = styled.hr<dark>`
+  ${tw`  border-2 rounded   `}
+  width:0;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  border-color: ${(p) => (p.darkMode ? `white` : `black`)};
 `;
 export const ListEle = styled.div`
   &:hover ${MovingLine} {

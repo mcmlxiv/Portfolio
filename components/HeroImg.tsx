@@ -12,15 +12,14 @@ import {
   HeroWrapMock,
 } from "./StyledComps";
 
-const cloudID = process.env.NEXT_PUBLIC_IMG_ID;
 export const url = buildUrl("remembertodoscreen_t668li", {
   cloud: {
-    cloudName: cloudID,
+    cloudName: "mcmlxiv",
   },
 });
 const urlM = buildUrl("iPhoneMockup", {
   cloud: {
-    cloudName: cloudID,
+    cloudName: "mcmlxiv",
   },
 });
 
