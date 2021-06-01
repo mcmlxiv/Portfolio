@@ -50,7 +50,7 @@ const HeroImgProject = () => {
           <Image
             tw={"z-5 "}
             src={url}
-            alt="Project"
+            alt="RememberTodo"
             width="1920"
             height="1080"
             layout="responsive"
@@ -110,16 +110,16 @@ export const IndexMain = () => {
         </div>
         <div tw={"flex flex-col flex-1"}>
           <AboutList>
-            <p tw={"text-right"}>{aboutMeProjects}</p>
-            <p tw={"text-right"}>{portfolioHome}</p>
+            <p tw={"text-right mb-4"}>{aboutMeProjects}</p>
+            <p tw={"text-right mb-4"}>{portfolioHome}</p>
           </AboutList>
         </div>
       </Fade>
       <Fade bottom>
-        <div tw={"flex flex-col flex-1"}>
+        <div tw={"flex flex-col flex-1 my-4 lg:my-10"}>
           <Link href="/remembertodo">
             <a>
-              <h3 tw={"text-lg  font-semibold  my-4 lg:text-4xl min-h-full  "}>
+              <h3 tw={"text-lg  font-semibold   lg:text-4xl min-h-full  "}>
                 Remember Todo!
               </h3>
             </a>
@@ -274,7 +274,7 @@ export const ArtMain = () => {
                     <Image
                       tw={"z-5"}
                       src={url}
-                      alt="Project"
+                      alt={url}
                       width="1920"
                       height="1080"
                       layout="responsive"

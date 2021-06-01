@@ -89,7 +89,7 @@ const HeroImgRemember = () => {
           <Image
             tw={"z-5 "}
             src={url}
-            alt="Project"
+            alt="RememberTodo"
             width="1920"
             height="1080"
             layout="responsive"

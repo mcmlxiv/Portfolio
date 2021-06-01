@@ -59,10 +59,10 @@ export const IndexHeader = () => {
         <IndexContainer>
           <TypeWriter />
           <Words {...{ darkMode }}>
-            <p tw={"text-lg lg:mb-8"}>"Head up, Keep forward."</p>
+            <p tw={"text-lg lg:my-24"}>"Head up, Keep forward."</p>
             <div
               tw={
-                "flex flex-1 flex-col lg:flex-row m-14 lg:m-0 items-center self-center "
+                "flex flex-1 flex-col lg:flex-row m-14 lg:m-0 items-center self-center lg:self-auto "
               }
             >
               <Link href="/">
