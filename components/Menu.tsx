@@ -29,7 +29,7 @@ const NavLinks = styled.div<BurgerProps>`
 `;
 
 const List = styled.ul<BurgerProps>`
-  ${tw`  fixed  flex justify-center items-center flex-1 flex-col absolute top-1/2 left-1/2 overflow-hidden gap-4 leading-relaxed tracking-wider  `}
+  ${tw`  fixed  flex justify-center items-center flex-1 flex-col absolute top-1/2 left-1/2 overflow-hidden leading-relaxed tracking-wider  `}
   opacity: 1;
   height: 100vh;
   width: ${(p) => (p.open ? "100%" : "0")};
@@ -41,6 +41,7 @@ const List = styled.ul<BurgerProps>`
 
   > li {
     :first-child {
+      margin: 2rem auto;
       opacity: ${(p) => (p.open ? "1" : "0")};
       transform: ${(p) =>
         p.open
@@ -50,6 +51,8 @@ const List = styled.ul<BurgerProps>`
       transition: opacity 100ms 500ms ease-out, transform 300ms 500ms ease-out;
     }
     :nth-child(2) {
+      margin: 2rem auto;
+
       opacity: ${(p) => (p.open ? "1" : "0")};
       transform: ${(p) =>
         p.open
@@ -59,6 +62,8 @@ const List = styled.ul<BurgerProps>`
       transition: opacity 100ms 600ms ease-out, transform 300ms 600ms ease-out;
     }
     :nth-child(3) {
+      margin: 2rem auto;
+
       opacity: ${(p) => (p.open ? "1" : "0")};
       transform: ${(p) =>
         p.open
@@ -68,6 +73,8 @@ const List = styled.ul<BurgerProps>`
       transition: opacity 100ms 700ms ease-out, transform 300ms 700ms ease-out;
     }
     :nth-child(4) {
+      margin: 2rem auto;
+
       opacity: ${(p) => (p.open ? "1" : "0")};
       will-change: transform;
       transform: ${(p) =>
@@ -77,6 +84,8 @@ const List = styled.ul<BurgerProps>`
       transition: opacity 100ms 800ms ease-out, transform 300ms 800ms ease-out;
     }
     :nth-child(5) {
+      margin: 2rem auto;
+
       opacity: ${(p) => (p.open ? "1" : "0")};
       will-change: transform;
       transform: ${(p) =>
@@ -84,15 +93,6 @@ const List = styled.ul<BurgerProps>`
           ? "translateX(0) translateZ(0)"
           : "translateX(30px) translateZ(0)"};
       transition: opacity 100ms 800ms ease-out, transform 300ms 800ms ease-out;
-    }
-    :nth-child(6) {
-      opacity: ${(p) => (p.open ? "1" : "0")};
-      will-change: transform;
-      transform: ${(p) =>
-        p.open
-          ? "translateY(0) translateZ(0)"
-          : "translateY(30px) translateZ(0)"};
-      transition: opacity 100ms 900ms ease-out, transform 300ms 900ms ease-out;
     }
   }
 `;
@@ -118,13 +118,13 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
       {/*empty divs for clicking off of the menu*/}
       <div
         tw={
-          "w-9 h-4 bg-black  px-48 py-24 absolute top-0 left-0 z-50 opacity-0"
+          "w-9 h-4 bg-black  px-48 py-16 absolute top-0 left-0 z-50 opacity-0"
         }
         onClick={() => setOpen(!open)}
       />
       <List open={open}>
         <li>
-          <Link href="/" tw={"py-4 px-16"}>
+          <Link href="/" tw={"mb-8 px-16"}>
             {disabledNav === "home" ? (
               <p tw={"text-gray-500"}>HOME</p>
             ) : (
@@ -134,7 +134,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
         </li>
 
         <li>
-          <Link href="/remembertodo" tw={"py-4 px-16"}>
+          <Link href="/remembertodo" tw={"my-8 px-16"}>
             {disabledNav === "project" ? (
               <p tw={"text-gray-500"}>PROJECTS</p>
             ) : (
@@ -143,7 +143,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
           </Link>
         </li>
         <li>
-          <Link href="/art" tw={"py-4 px-16"}>
+          <Link href="/art" tw={"my-8 px-16"}>
             {disabledNav === "art" ? (
               <p tw={"text-gray-500"}>ART</p>
             ) : (
@@ -152,7 +152,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
           </Link>
         </li>
         <li>
-          <Link href="/contact" tw={"py-4 px-16"}>
+          <Link href="/contact" tw={"my-8 px-16"}>
             {disabledNav === "contact" ? (
               <p tw={"text-gray-500"}>CONTACT</p>
             ) : (
@@ -166,7 +166,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
       </List>
       <div
         tw={
-          "w-9 h-8 bg-black  px-48 py-24 absolute bottom-0 left-0 z-50 opacity-0 "
+          "w-9 h-8 bg-black  px-48 py-16 absolute bottom-0 left-0 z-50 opacity-0 "
         }
         onClick={() => setOpen(!open)}
       />

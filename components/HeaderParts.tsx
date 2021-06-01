@@ -29,7 +29,7 @@ const smoothScrollToProj = (e: { preventDefault: () => void }) => {
   });
 };
 const Words = styled.h2<dark>`
-  ${tw`   italic text-sm font-light overflow-hidden h-full text-lg lg:text-xl  `}
+  ${tw`   italic text-sm font-light overflow-hidden h-full text-lg lg:text-xl w-full `}
 
   display: flex;
   flex-direction: column;
@@ -59,8 +59,12 @@ export const IndexHeader = () => {
         <IndexContainer>
           <TypeWriter />
           <Words {...{ darkMode }}>
-            <p tw={"text-lg"}>"Head up, Keep forward."</p>
-            <div tw={"flex flex-1 mt-8 items-center"}>
+            <p tw={"text-lg lg:mb-8"}>"Head up, Keep forward."</p>
+            <div
+              tw={
+                "flex flex-1 flex-col lg:flex-row m-14 lg:m-0 items-center self-center "
+              }
+            >
               <Link href="/">
                 <a onClick={smoothScrollToProj}>
                   <ProjectButton {...{ darkMode }}>Projects</ProjectButton>

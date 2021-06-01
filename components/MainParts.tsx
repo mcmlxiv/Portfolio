@@ -76,7 +76,7 @@ export const IndexMain = () => {
         <div tw={" mb-24"} id={"main"}>
           <h1
             tw={
-              "text-lg flex flex-col font-semibold   mb-2 lg:mb-4 lg:text-8xl text-4xl min-h-full "
+              "flex flex-col font-semibold   mb-2 lg:mb-4 lg:text-8xl text-6xl min-h-full "
             }
           >
             About <WordsMain {...{ darkMode }}>Me.</WordsMain>
@@ -101,14 +101,14 @@ export const IndexMain = () => {
         <div id={"projects"} tw={"my-16"}>
           <h1
             tw={
-              "text-lg flex flex-col font-semibold  lg:text-8xl text-4xl min-h-full text-right"
+              " flex flex-col font-semibold  lg:text-8xl text-6xl  min-h-full text-right"
             }
           >
             My <br />
             Projects.
           </h1>
         </div>
-        <div tw={"flex flex-col flex-1  text-right"}>
+        <div tw={"flex flex-col flex-1"}>
           <AboutList>
             <p tw={"text-right"}>{aboutMeProjects}</p>
             <p tw={"text-right"}>{portfolioHome}</p>
