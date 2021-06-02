@@ -38,11 +38,7 @@ const List = styled.ul<BurgerProps>`
   font-size: clamp(0.3rem, 1.2rem, 2rem);
 `;
 
-const Menu: React.FC<BurgerProps> = ({
-  open,
-  disabledNav,
-  toggleSetOpen,
-}) => {
+const Menu: React.FC<BurgerProps> = ({ open, disabledNav, toggleSetOpen }) => {
   useEffect(() => {
     //useEffect for removing scroll on menu toggle
     //Must use on mounted page as  NextJS is server side rendering
