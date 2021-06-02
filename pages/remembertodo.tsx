@@ -175,23 +175,11 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
   };
 
   const RememberMain = () => {
-    const [id, setId] = React.useState<string>("");
-    React.useEffect(() => {
-      setTimeout(() => {
-        setId("lU3gMB7j6E4");
-      }, 100);
-      return () => {
-        clearTimeout();
-      };
-    }, []);
-
     return (
       <div
         tw={"py-9 flex flex-col flex-1 lg:gap-24 gap-12 "}
         className={"first"}
       >
-        <YoutubeEmbed embedID={id} />
-
         <Fade bottom>
           <div>
             <h1
