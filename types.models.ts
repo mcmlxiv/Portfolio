@@ -33,6 +33,6 @@ export const ThemeContext = React.createContext<ThemeProps>({
 });
 
 export interface openC {
-  openCookie?: boolean;
+  closeCookie?: boolean;
   open?: boolean;
 }

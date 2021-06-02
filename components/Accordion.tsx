@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import tw, { styled } from "twin.macro";
-import PlusMinus, {
+import {
   PlusDatabase,
   PlusFramework,
   PlusLang,
@@ -38,7 +38,7 @@ const PanelDatabase = styled.div<opens>`
 `;
 
 const PanelService = styled.div<opens>`
-  ${tw`  dark:text-gray-200 text-gray-500 `}
+  ${tw`  dark:text-gray-200 text-gray-500 mb-4 `}
   display: ${(p) => (p.panel !== "Services" ? `none` : `block`)};
   overflow: hidden;
 `;

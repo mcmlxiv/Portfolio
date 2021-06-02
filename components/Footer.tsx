@@ -136,7 +136,7 @@ const Footer = () => {
           </div>
         </FooterSkills>
         <div tw={"flex flex-1 flex-col w-40 md:max-h-10"}>
-          <div tw={"cursor-pointer mb-2  hover:font-semibold"}>
+          <div tw={"cursor-pointer my-2  hover:font-semibold"}>
             <Link href="tel:+866 0909 316 039 ">
               <a>+866 0909 316 039</a>
             </Link>

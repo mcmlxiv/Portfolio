@@ -64,7 +64,7 @@ const Menu: React.FC<BurgerProps> = ({ open, disabledNav, toggleSetOpen }) => {
       />
       <List open={open}>
         <Fade right when={open} delay={500} duration={1000}>
-          <li tw={"my-8 px-16"}>
+          <li tw={"my-8 px-16"} onClick={toggleSetOpen}>
             <Link href="/">
               {disabledNav === "home" ? (
                 <p tw={"text-gray-500"}>HOME</p>
@@ -75,7 +75,7 @@ const Menu: React.FC<BurgerProps> = ({ open, disabledNav, toggleSetOpen }) => {
           </li>
         </Fade>
         <Fade right when={open} delay={550} duration={1000}>
-          <li tw={"my-8 px-16"}>
+          <li tw={"my-8 px-16"} onClick={toggleSetOpen}>
             <Link href="/remembertodo">
               {disabledNav === "project" ? (
                 <p tw={"text-gray-500 "}>PROJECTS</p>
@@ -86,7 +86,7 @@ const Menu: React.FC<BurgerProps> = ({ open, disabledNav, toggleSetOpen }) => {
           </li>
         </Fade>
         <Fade right when={open} delay={600} duration={1000}>
-          <li tw={"my-8 px-16"}>
+          <li tw={"my-8 px-16"} onClick={toggleSetOpen}>
             <Link href="/art">
               {disabledNav === "art" ? (
                 <p tw={"text-gray-500 "}>ART</p>
@@ -97,7 +97,7 @@ const Menu: React.FC<BurgerProps> = ({ open, disabledNav, toggleSetOpen }) => {
           </li>
         </Fade>
         <Fade right when={open} delay={650} duration={1000}>
-          <li tw={"my-8 px-16"}>
+          <li tw={"my-8 px-16"} onClick={toggleSetOpen}>
             <Link href="/contact">
               {disabledNav === "contact" ? (
                 <p tw={"text-gray-500"}>CONTACT</p>
