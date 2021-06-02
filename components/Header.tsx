@@ -7,7 +7,7 @@ import FullMenu from "./FullMenu";
 import { ThemeContext } from "../types.models";
 
 const NavBarWrapper = styled.div`
-  ${tw`   flex-1 flex flex-col justify-center items-center  xl:px-72 text-whiteCream `}
+  ${tw`   flex-1 flex flex-col justify-center items-center  xl:px-72 lg:py-10  text-whiteCream `}
   grid-column:full-start/full-end;
 `;
 

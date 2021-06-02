@@ -37,6 +37,7 @@ import { darker } from "../types.models";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Image.module.css";
+import YoutubeEmbed from "../components/YoutubeEmbed";
 
 const fadeIn = keyframes`
   from{
@@ -68,8 +69,8 @@ const AboutList = styled.div`
 const HeroWrapRemember = styled.div`
   ${tw` relative rounded py-12 `};
   filter: drop-shadow(4px 2px 10px #a3a3a2);
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   padding-left: 1rem;
   min-width: 90%;
   min-height: 90%;
@@ -179,6 +180,8 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
         tw={"py-9 flex flex-col flex-1 lg:gap-24 gap-12 "}
         className={"first"}
       >
+        <YoutubeEmbed embedID={"lU3gMB7j6E4"} />
+
         <Fade bottom>
           <div>
             <h1

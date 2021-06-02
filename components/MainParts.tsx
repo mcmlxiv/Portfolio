@@ -24,6 +24,7 @@ import {
   HeroWrapProj,
 } from "./StyledComps";
 import Fade from "react-reveal/Fade";
+import YoutubeEmbed from "./YoutubeEmbed";
 
 const WordsMain = styled.div<dark>`
   will-change: auto;
@@ -125,9 +126,10 @@ export const IndexMain = () => {
             </a>
           </Link>
           <HeroImgProject />
+          <YoutubeEmbed embedID={"lU3gMB7j6E4"} />
           <div
             tw={
-              "justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify w-80 mb-8"
+              "justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify w-80 my-8"
             }
           >
             <p>{RememberTodo}</p>

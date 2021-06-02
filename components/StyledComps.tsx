@@ -27,7 +27,7 @@ export const AboutList = styled.div`
 `;
 
 export const ProjectButton = styled.button<dark>`
-  ${tw`  lg:px-10 lg:py-4 text-sm px-24 py-2 lg:text-lg font-semibold tracking-wider  lg:mr-4 lg:mb-0 mb-6 rounded-lg transition duration-300 ease-in-out shadow-lg max-w-full`}
+  ${tw`  lg:px-10 lg:py-4 text-sm px-20  py-2 lg:text-lg font-semibold tracking-wider  lg:mr-4 lg:mb-0 mb-6 rounded-lg transition duration-300 ease-in-out shadow-lg max-w-full`}
 
   ${(p) =>
     p.darkMode
@@ -49,8 +49,9 @@ export const ProjectButton = styled.button<dark>`
   }`};
 `;
 export const ProjectAltButton = styled.button<dark>`
-  ${tw`  lg:px-10 lg:py-4 text-sm px-24 py-2 lg:text-lg font-semibold tracking-wider rounded-lg transition duration-300 ease-in-out shadow-lg max-w-full`}
+  ${tw`  lg:px-10 lg:py-4 text-sm px-20 py-2 lg:text-lg font-semibold tracking-wider rounded-lg transition duration-300 ease-in-out shadow-lg `}
 
+  width:max-content;
   ${(p) =>
     p.darkMode
       ? `  border: 1px solid rgba(179, 178, 177, 0.8) ;
@@ -254,10 +255,8 @@ export const ListEle = styled.div`
 export const HeroWrapProj = styled.div`
   ${tw` relative rounded my-8 `};
 
-  @media only screen and (min-width: 960px) {
-    width: 40%;
-    height: 40%;
-  }
+  width: 100%;
+  height: 100%;
 `;
 
 export const HeroWrapMock = styled.div`
@@ -276,18 +275,10 @@ export const HeroWrap = styled.div`
 export const BrowserBack = styled.div`
   ${tw` absolute top-0  object-cover rounded `}
 
-  height:10rem;
-  width: 20rem;
+  height: 100%;
+  width: 100%;
   transform: translateY(-14px) translateZ(0);
   background-color: #5a5a5f;
-  @media only screen and (min-width: 376px) {
-    opacity: 0;
-  }
-  @media only screen and (min-width: 960px) {
-    height: 13rem;
-    width: 24rem;
-    opacity: 1;
-  }
 `;
 
 export const BrowserWait = styled.div`
