@@ -4,6 +4,134 @@ import SunMoon from "./SunMoon";
 import { ThemeContext } from "../types.models";
 import { BurgerProps } from "../types.models";
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
+
+const NavLinks = styled.div<BurgerProps>`
+  ${tw`  fixed text-black dark:text-whiteCream`}
+
+  background-color: ${(p) => (p.darkMode ? `black` : `white`)};
+
+  height: 100vh;
+  text-decoration: none;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 10;
+  list-style: none;
+  width: ${(props) => (props.open ? "100%" : 0)};
+  opacity: ${(props) => (props.open ? 1 : 0)};
+
+  transition-property: opacity, width;
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-out;
+  will-change: transform;
+`;
+
+const List = styled.ul<BurgerProps>`
+  ${tw`  fixed  flex justify-center items-center flex-1 flex-col absolute top-1/2 left-1/2 overflow-hidden leading-relaxed tracking-wider  `}
+  opacity: 1;
+  height: 100vh;
+  bottom: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  font-size: clamp(0.3rem, 1.2rem, 2rem);
+`;
+
+const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
+  useEffect(() => {
+    //useEffect for removing scroll on menu toggle
+    //Must use on mounted page as  NextJS is server side rendering
+    //document doesnt exist until after the page is fully loaded
+    const reloadScrollBars = () => {
+      document.documentElement.style.overflow = "auto";
+    };
+    const unloadScrollBars = () => {
+      document.documentElement.style.overflow = "hidden";
+    };
+    open ? unloadScrollBars() : reloadScrollBars();
+  }, [open]);
+
+  const { darkMode } = useContext(ThemeContext);
+
+  return (
+    <NavLinks {...{ open, darkMode }}>
+      <div
+        tw={
+          "w-9 h-4 bg-black  px-48 py-16 absolute top-0 left-0 z-50 opacity-0"
+        }
+        onClick={() => setOpen(!open)}
+      />
+      <List open={open}>
+        <Fade right when={open} delay={500} duration={1000}>
+          <li tw={"my-8 px-16"}>
+            <Link href="/">
+              {disabledNav === "home" ? (
+                <p tw={"text-gray-500"}>HOME</p>
+              ) : (
+                <a>HOME</a>
+              )}
+            </Link>
+          </li>
+        </Fade>
+        <Fade right when={open} delay={550} duration={1000}>
+          <li tw={"my-8 px-16"}>
+            <Link href="/remembertodo">
+              {disabledNav === "project" ? (
+                <p tw={"text-gray-500 "}>PROJECTS</p>
+              ) : (
+                <a>PROJECTS</a>
+              )}
+            </Link>
+          </li>
+        </Fade>
+        <Fade right when={open} delay={600} duration={1000}>
+          <li tw={"my-8 px-16"}>
+            <Link href="/art">
+              {disabledNav === "art" ? (
+                <p tw={"text-gray-500 "}>ART</p>
+              ) : (
+                <a>ART</a>
+              )}
+            </Link>
+          </li>
+        </Fade>
+        <Fade right when={open} delay={650} duration={1000}>
+          <li tw={"my-8 px-16"}>
+            <Link href="/contact">
+              {disabledNav === "contact" ? (
+                <p tw={"text-gray-500"}>CONTACT</p>
+              ) : (
+                <a>CONTACT</a>
+              )}
+            </Link>
+          </li>
+        </Fade>
+        <Fade bottom when={open} delay={650} duration={1000}>
+          <li>
+            <SunMoon />
+          </li>
+        </Fade>
+      </List>
+      <div
+        tw={
+          "w-9 h-8 bg-black  px-48 py-16 absolute bottom-0 left-0 z-50 opacity-0 "
+        }
+        onClick={() => setOpen(!open)}
+      />
+    </NavLinks>
+  );
+};
+
+export default Menu;
+
+{
+  /*import React, { useContext, useEffect } from "react";
+import tw, { styled } from "twin.macro";
+import SunMoon from "./SunMoon";
+import { ThemeContext } from "../types.models";
+import { BurgerProps } from "../types.models";
+import Link from "next/link";
 
 const NavLinks = styled.div<BurgerProps>`
   ${tw`  fixed text-black dark:text-whiteCream`}
@@ -97,7 +225,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
 
   return (
     <NavLinks {...{ open, darkMode }}>
-      {/*empty divs for clicking off of the menu*/}
+
       <div
         tw={
           "w-9 h-4 bg-black  px-48 py-16 absolute top-0 left-0 z-50 opacity-0"
@@ -108,7 +236,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
         <li>
           <Link href="/" tw={"mb-8 px-16"}>
             {disabledNav === "home" ? (
-              <p tw={"text-gray-500"}>HOME</p>
+              <p tw={"text-gray-500 my-8 px-16"}>HOME</p>
             ) : (
               <a>HOME</a>
             )}
@@ -118,7 +246,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
         <li>
           <Link href="/remembertodo" tw={"my-8 px-16"}>
             {disabledNav === "project" ? (
-              <p tw={"text-gray-500"}>PROJECTS</p>
+              <p tw={"text-gray-500 my-8 px-16"}>PROJECTS</p>
             ) : (
               <a>PROJECTS</a>
             )}
@@ -127,7 +255,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
         <li>
           <Link href="/art" tw={"my-8 px-16"}>
             {disabledNav === "art" ? (
-              <p tw={"text-gray-500"}>ART</p>
+              <p tw={"text-gray-500 my-8 px-16"}>ART</p>
             ) : (
               <a>ART</a>
             )}
@@ -136,7 +264,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
         <li>
           <Link href="/contact" tw={"my-8 px-16"}>
             {disabledNav === "contact" ? (
-              <p tw={"text-gray-500"}>CONTACT</p>
+              <p tw={"text-gray-500 my-8 px-16"}>CONTACT</p>
             ) : (
               <a>CONTACT</a>
             )}
@@ -157,3 +285,6 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
 };
 
 export default Menu;
+
+*/
+}

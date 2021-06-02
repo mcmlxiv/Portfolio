@@ -74,7 +74,7 @@ export const IndexMain = () => {
   return (
     <div tw={"py-9 flex flex-col flex-1 "} className={"first"}>
       <Fade bottom>
-        <div tw={" mb-24"} id={"main"}>
+        <div tw={" mb-8 lg:mb-24"} id={"main"}>
           <h1
             tw={
               "flex flex-col font-semibold   mb-2 lg:mb-4 lg:text-8xl text-6xl min-h-full "
@@ -87,19 +87,19 @@ export const IndexMain = () => {
       <Fade bottom>
         <div tw={"flex flex-col flex-1"}>
           <AboutList>
-            <p>{aboutMe}</p>
+            <p tw={"mb-4 lg:mb-0 "}>{aboutMe}</p>
             <br />
             <p>{aboutMeCont}</p>
           </AboutList>
           <AboutList>
-            <p>{aboutMeFinal}</p>
+            <p tw={"mb-4 lg:mb-0 "}>{aboutMeFinal}</p>
             <br />
             <p>{aboutMeFinalEnd}</p>
           </AboutList>
         </div>
       </Fade>
       <Fade bottom>
-        <div id={"projects"} tw={"my-16"}>
+        <div id={"projects"} tw={"my-12 lg:my-16"}>
           <h1
             tw={
               " flex flex-col font-semibold  lg:text-8xl text-6xl  min-h-full text-right"

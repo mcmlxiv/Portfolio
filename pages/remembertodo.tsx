@@ -37,7 +37,6 @@ import { darker } from "../types.models";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Image.module.css";
-import YoutubeEmbed from "../components/YoutubeEmbed";
 
 const fadeIn = keyframes`
   from{
@@ -123,7 +122,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
         </div>
         <Fade bottom>
           <AboutList>
-            <p tw={"mb-4"}>{RememberTodoProject}</p>
+            <p tw={"mb-4 lg:mb-0"}>{RememberTodoProject}</p>
             <p>{RememberTodoProjectCont}</p>
           </AboutList>
         </Fade>
@@ -194,7 +193,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
         <Fade bottom>
           <div tw={"flex flex-col flex-1 "}>
             <AboutList>
-              <p tw={"mb-4"}>{RememberTodoPurpose}</p>
+              <p tw={"mb-4 lg:mb-0"}>{RememberTodoPurpose}</p>
               <p>{RememberTodoPurposeCont}</p>
             </AboutList>
           </div>
@@ -222,7 +221,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
               <SiMaterialUi />
             </div>
             <AboutList>
-              <p tw={"my-4"}>{RememberTodoStack}</p>
+              <p tw={"my-4 "}>{RememberTodoStack}</p>
             </AboutList>
             <AboutList>
               <p>{RememberTodoStackCont}</p>
@@ -263,7 +262,7 @@ const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
           </div>
           <div tw={"flex flex-col flex-1 gap-8"}>
             <AboutList>
-              <p tw={"my-4"}>{RememberTodoLessons}</p>
+              <p tw={"mt-4 mb-4 lg:mb-0"}>{RememberTodoLessons}</p>
               <p>{RememberTodoLessonsCont}</p>
             </AboutList>
           </div>
