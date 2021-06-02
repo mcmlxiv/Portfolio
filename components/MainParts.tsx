@@ -129,7 +129,7 @@ export const IndexMain = () => {
           <YoutubeEmbed embedID={"lU3gMB7j6E4"} />
           <div
             tw={
-              "justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify w-80 my-8"
+              "justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify md:w-3/4 w-full my-8"
             }
           >
             <p>{RememberTodo}</p>
