@@ -5,6 +5,7 @@ export interface BurgerProps {
   open: boolean;
   darkMode?: boolean;
   disabledNav?: string;
+  toggleSetOpen?: () => void;
 }
 
 export interface dark {
@@ -21,12 +22,17 @@ export interface darker {
 export interface ThemeProps {
   toggleDarkMode: () => void;
   darkMode: boolean;
+  toggleSetOpen?: () => void;
+  open?: boolean;
 }
 export const ThemeContext = React.createContext<ThemeProps>({
   toggleDarkMode: () => void {},
   darkMode: false,
+  toggleSetOpen: () => void {},
+  open: false,
 });
 
 export interface openC {
-  open: boolean;
+  openCookie?: boolean;
+  open?: boolean;
 }

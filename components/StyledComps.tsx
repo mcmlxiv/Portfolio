@@ -27,6 +27,17 @@ export const AboutList = styled.div`
 `;
 
 export const ProjectButton = styled.button<dark>`
+  ${tw`  lg:px-10 lg:py-4 text-sm px-20  py-2 lg:text-lg font-semibold tracking-wider  lg:mr-4 lg:mb-0 mb-6 rounded-lg transition duration-300 ease-in-out shadow-sm max-w-full`}
+  background:linear-gradient(#51a9ee, #147bcd);
+
+  color: white;
+  &:hover {
+    background: linear-gradient(#51a9ee, #51a9ee);
+  }
+`;
+
+{
+  /*export const ProjectButton = styled.button<dark>`
   ${tw`  lg:px-10 lg:py-4 text-sm px-20  py-2 lg:text-lg font-semibold tracking-wider  lg:mr-4 lg:mb-0 mb-6 rounded-lg transition duration-300 ease-in-out shadow-lg max-w-full`}
 
   ${(p) =>
@@ -48,18 +59,15 @@ export const ProjectButton = styled.button<dark>`
     color:black;
   }`};
 `;
-export const ProjectAltButton = styled.button<dark>`
-  ${tw`  lg:px-10 lg:py-4 text-sm px-20 py-2 lg:text-lg font-semibold tracking-wider rounded-lg transition duration-300 ease-in-out shadow-lg `}
 
-  width:max-content;
-  ${(p) =>
+ ${(p) =>
     p.darkMode
       ? `  border: 1px solid rgba(179, 178, 177, 0.8) ;
   background-color: black;
   color:white;
   &:hover{
     border: 1px solid white ;
-    
+
   }`
       : `border: 1px solid rgba(179, 178, 177, 0.8) ;
   background-color: white;
@@ -67,20 +75,23 @@ export const ProjectAltButton = styled.button<dark>`
   &:hover{
     border: 1px solid black;
 
-  }`};
+  }`};*/
+}
+export const ProjectAltButton = styled.button<dark>`
+  ${tw`  lg:px-10 lg:py-4 text-sm px-20 py-2 lg:text-lg font-semibold tracking-wider rounded-lg transition duration-300 ease-in-out shadow-sm `}
+
+  width:max-content;
+  background: linear-gradient(#f5f5f7, #d4d4d4);
+
+  color: black;
+  &:hover {
+    background: linear-gradient(#d4d4d9, #d4d4d9);
+  }
 `;
 
 export const ArtWrapProj = styled.div`
   height: 100%;
   width: 100%;
-
-  @media only screen and (min-width: 376px) {
-    ${tw`  px-10`}
-  }
-  @media only screen and (min-width: 960px) {
-    height: 50rem;
-    width: 60rem;
-  }
 `;
 
 export const Head = styled.title`

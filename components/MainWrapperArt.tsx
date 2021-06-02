@@ -2,7 +2,7 @@ import React from "react";
 import tw, { styled } from "twin.macro";
 
 const MainWrapper = styled.main`
-  ${tw` flex-1 flex flex-col justify-center items-center dark:text-whiteCream text-black w-full xl:px-72 lg:py-10 `}
+  ${tw` flex-1 flex flex-col justify-center items-center dark:text-whiteCream text-black w-full  `}
   grid-column:1 /-1;
 `;
 
@@ -14,7 +14,7 @@ const Main = ({ part }) => {
   return (
     <MainWrapper id={"main"}>
       <Home>
-        <div>{part()}</div>
+        <div tw={"w-full"}>{part()}</div>
       </Home>
     </MainWrapper>
   );

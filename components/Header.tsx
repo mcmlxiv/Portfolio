@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import tw, { styled } from "twin.macro";
 import Hamburger from "./Hamburger";
 import Menu from "./Menu";
@@ -12,8 +12,7 @@ const NavBarWrapper = styled.div`
 `;
 
 const Header = ({ part, disabledNav }) => {
-  const [open, setOpen] = useState<boolean>(false);
-  const { darkMode } = useContext(ThemeContext);
+  const { darkMode, open, toggleSetOpen } = useContext(ThemeContext);
 
   return (
     <NavBarWrapper>
@@ -66,8 +65,8 @@ const Header = ({ part, disabledNav }) => {
             </Link>
             <FullMenu {...{ open, disabledNav }} />
             <div tw={"flex flex-1 flex-col md:hidden"}>
-              <Hamburger {...{ open, setOpen }} />
-              <Menu {...{ open, setOpen, disabledNav }} />
+              <Hamburger {...{ open, toggleSetOpen }} />
+              <Menu {...{ open, toggleSetOpen, disabledNav }} />
             </div>
           </header>
         </div>

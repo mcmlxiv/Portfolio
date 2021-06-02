@@ -5,14 +5,21 @@ import Meta from "../components/Meta";
 import { ArtHeader } from "../components/HeaderParts";
 import { ArtMain } from "../components/MainParts";
 import MainWrapperArt from "../components/MainWrapperArt";
-import { darker, ThemeContext } from "../types.models";
+import { ThemeContext, ThemeProps } from "../types.models";
 import { ArtContainer } from "../components/StyledComps";
 
-const Art: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
+const Art: React.FC<ThemeProps> = ({
+  darkMode,
+  toggleDarkMode,
+  toggleSetOpen,
+  open,
+}) => {
   const themes = {
     //Props for Context dist
     toggleDarkMode,
     darkMode,
+    toggleSetOpen,
+    open,
   };
 
   const disabledNav = "art";

@@ -3,7 +3,7 @@ import tw, { styled } from "twin.macro";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { ThemeContext } from "../types.models";
+import { ThemeContext, ThemeProps } from "../types.models";
 
 import Meta from "../components/Meta";
 import Fade from "react-reveal/Fade";
@@ -33,7 +33,6 @@ import {
   SiHeroku,
 } from "react-icons/si";
 import { RememberContainer } from "../components/StyledComps";
-import { darker } from "../types.models";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Image.module.css";
@@ -101,11 +100,18 @@ const HeroImgRemember = () => {
   );
 };
 
-const RememberTodo: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
+const RememberTodo: React.FC<ThemeProps> = ({
+  darkMode,
+  toggleDarkMode,
+  toggleSetOpen,
+  open,
+}) => {
   const themes = {
     //Props for Context dist
     toggleDarkMode,
     darkMode,
+    toggleSetOpen,
+    open,
   };
 
   const RememberHeader = () => {

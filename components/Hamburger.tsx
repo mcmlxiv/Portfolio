@@ -16,8 +16,8 @@ const MobileMenuIcon = styled.div<BurgerProps>`
     height: 2px;
     background: ${(p) =>
       p.open
-        ? `${p.darkMode ? "white" : "black"}`
-        : `${p.darkMode ? "white" : "black"}`};
+        ? `${p.darkMode ? "#d4d4d4" : "black"}`
+        : `${p.darkMode ? "#d4d4d4" : "black"}`};
     margin: 5px 0;
     border-radius: 14px;
     position: relative;
@@ -39,12 +39,12 @@ const MobileMenuIcon = styled.div<BurgerProps>`
     }
   }
 `;
-const Hamburger: React.FC<BurgerProps> = ({ open, setOpen }) => {
+const Hamburger: React.FC<BurgerProps> = ({ open, toggleSetOpen }) => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
     <>
-      <MobileMenuIcon onClick={() => setOpen(!open)} {...{ open, darkMode }}>
+      <MobileMenuIcon onClick={toggleSetOpen} {...{ open, darkMode }}>
         <div tw={"w-9 "} />
         <div tw={"w-6 "} />
         <div tw={"w-3  "} />

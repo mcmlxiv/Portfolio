@@ -86,7 +86,29 @@ export const IndexHeader = () => {
 };
 
 {
-  /*export const ProjectHeader = () => {
+  /*
+
+  <div
+              tw={
+                "flex flex-1 flex-col lg:flex-row m-14 lg:m-0 items-center self-center lg:self-auto "
+              }
+            >
+              <Link href="/">
+                <a onClick={smoothScrollToProj}>
+                  <ProjectButton {...{ darkMode }}>Projects</ProjectButton>
+                </a>
+              </Link>
+              <Link href="/">
+                <a onClick={smoothScrollToMain}>
+                  <ProjectAltButton {...{ darkMode }}>
+                    About Me
+                  </ProjectAltButton>
+                </a>
+              </Link>
+            </div>
+
+
+  export const ProjectHeader = () => {
   const { darkMode } = useContext(ThemeContext);
 
   return (

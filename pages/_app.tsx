@@ -3,7 +3,9 @@ import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 
 const App = ({ Component, pageProps }) => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
+
   useEffect(() => {
     (() => {
       const themeLS = localStorage.getItem("theme");
@@ -22,13 +24,16 @@ const App = ({ Component, pageProps }) => {
     localStorage.setItem("theme", `${!darkMode ? "dark" : "light"}`);
   };
 
+  const toggleSetOpen = () => {
+    setOpen(!open);
+  };
   return (
     <div>
       <GlobalStyles />
       <ThemeProvider attribute="class">
         <Component
           {...pageProps}
-          {...{ darkMode, setDarkMode, toggleDarkMode }}
+          {...{ darkMode, setDarkMode, toggleDarkMode, open, toggleSetOpen }}
         />
       </ThemeProvider>
     </div>

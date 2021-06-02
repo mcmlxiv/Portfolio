@@ -2,21 +2,27 @@ import React, { useContext } from "react";
 import tw, { styled } from "twin.macro";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { ThemeContext } from "../types.models";
-
+import { ThemeContext, ThemeProps, dark } from "../types.models";
 import Meta from "../components/Meta";
 import { ContactHeader } from "../components/HeaderParts";
 import { useForm, ValidationError } from "@formspree/react";
 import Link from "next/link";
 import SocialIcons from "../components/SocialIcons";
 import Fade from "react-reveal/Fade";
-import { dark, darker } from "../types.models";
 import { ContactContainer } from "../components/StyledComps";
 
-const Contact: React.FC<darker> = ({ darkMode, toggleDarkMode }) => {
+const Contact: React.FC<ThemeProps> = ({
+  darkMode,
+  toggleDarkMode,
+  toggleSetOpen,
+  open,
+}) => {
   const themes = {
+    //Props for Context dist
     toggleDarkMode,
     darkMode,
+    toggleSetOpen,
+    open,
   };
 
   const disabledNav = "contact";

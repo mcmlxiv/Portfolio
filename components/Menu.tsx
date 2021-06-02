@@ -38,7 +38,11 @@ const List = styled.ul<BurgerProps>`
   font-size: clamp(0.3rem, 1.2rem, 2rem);
 `;
 
-const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
+const Menu: React.FC<BurgerProps> = ({
+  open,
+  disabledNav,
+  toggleSetOpen,
+}) => {
   useEffect(() => {
     //useEffect for removing scroll on menu toggle
     //Must use on mounted page as  NextJS is server side rendering
@@ -60,7 +64,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
         tw={
           "w-9 h-4 bg-black  px-48 py-16 absolute top-0 left-0 z-50 opacity-0"
         }
-        onClick={() => setOpen(!open)}
+        onClick={toggleSetOpen}
       />
       <List open={open}>
         <Fade right when={open} delay={500} duration={1000}>
@@ -117,7 +121,7 @@ const Menu: React.FC<BurgerProps> = ({ open, setOpen, disabledNav }) => {
         tw={
           "w-9 h-8 bg-black  px-48 py-16 absolute bottom-0 left-0 z-50 opacity-0 "
         }
-        onClick={() => setOpen(!open)}
+        onClick={toggleSetOpen}
       />
     </NavLinks>
   );

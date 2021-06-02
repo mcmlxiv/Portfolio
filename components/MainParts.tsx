@@ -137,7 +137,7 @@ export const IndexMain = () => {
           <Link href="/remembertodo">
             <a
               tw={
-                "flex items-center cursor-pointer overflow-hidden font-medium  hover:font-semibold w-52 "
+                "flex items-center cursor-pointer overflow-hidden font-medium  hover:font-semibold w-52 not-italic "
               }
             >
               <h4 tw={"text-lg min-h-full  "}>VIEW PROJECT</h4>
@@ -265,13 +265,11 @@ export const ArtMain = () => {
               },
             });
             return (
-              <div key={id} tw={"my-24"}>
+              <div key={id} tw={"my-24 relative"}>
                 <Fade bottom>
                   <div tw={"flex items-center justify-center cursor-pointer"}>
                     <h2>{id}</h2>
                   </div>
-
-                  <hr tw={"border-2 border-gray-300 opacity-0 w-96 "} />
                   <ArtWrapProj>
                     <Image
                       tw={"z-5"}
