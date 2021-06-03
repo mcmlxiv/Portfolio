@@ -120,7 +120,7 @@ const Footer = () => {
             <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
               <h5>MongoDB</h5>
               <h5>GraphQL</h5>
-              <h5>Rest</h5>
+              <h5>REST/RESTful API</h5>
             </div>
           </div>
           <div>
@@ -132,6 +132,7 @@ const Footer = () => {
               <h5>Adobe XD</h5>
               <h5>Adobe Photoshop</h5>
               <h5>Mlab</h5>
+              <h5>Git</h5>
             </div>
           </div>
         </FooterSkills>
