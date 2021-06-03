@@ -137,50 +137,41 @@ const Footer = () => {
         </FooterSkills>
         <div tw={"flex flex-1 flex-col w-40 md:max-h-10"}>
           <div tw={"cursor-pointer my-2  hover:font-semibold"}>
-            <Link href="tel:+866 0909 316 039 ">
-              <a>+866 0909 316 039</a>
-            </Link>
+            <a href="tel:+866 0909 316 039 ">+866 0909 316 039</a>
           </div>
           <div tw={"cursor-pointer mb-2  hover:font-semibold"}>
-            <Link href="mailto:enpower56@gmail.com">
-              <a>enpower56@gmail.com</a>
-            </Link>
+            <a href="mailto:enpower56@gmail.com">enpower56@gmail.com</a>
           </div>
         </div>
         <FooterBase>
           <div tw={"flex flex-1 gap-2  dark:text-gray-200 text-gray-500 "}>
             <FooterListEle>
-              <Link href="https://github.com/mcmlxiv">
-                <a
-                  tw={
-                    "pr-1 cursor-pointer hover:font-semibold hover:text-black"
-                  }
-                >
-                  github
-                </a>
-              </Link>
+              <a
+                href="https://github.com/mcmlxiv"
+                tw={"pr-1 cursor-pointer hover:font-semibold hover:text-black"}
+              >
+                github
+              </a>
             </FooterListEle>
             <FooterListEle>
-              <Link href="https://www.instagram.com/mjjp13/">
-                <a
-                  tw={
-                    "px-1 cursor-pointer hover:font-semibold hover:text-red-600"
-                  }
-                >
-                  instagram
-                </a>
-              </Link>
+              <a
+                href="https://www.instagram.com/mjjp13/"
+                tw={
+                  "px-1 cursor-pointer hover:font-semibold hover:text-red-600"
+                }
+              >
+                instagram
+              </a>
             </FooterListEle>
             <FooterListEle>
-              <Link href="https://www.linkedin.com/in/majid-popo-400291213">
-                <a
-                  tw={
-                    "px-1 cursor-pointer hover:font-semibold hover:text-blue-600"
-                  }
-                >
-                  linkedIn
-                </a>
-              </Link>
+              <a
+                href="https://www.linkedin.com/in/majid-popo-400291213"
+                tw={
+                  "px-1 cursor-pointer hover:font-semibold hover:text-blue-600"
+                }
+              >
+                linkedIn
+              </a>
             </FooterListEle>
           </div>
           <FooterCopy>
