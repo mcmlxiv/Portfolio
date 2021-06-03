@@ -105,7 +105,10 @@ export const ProjectAltButton = styled.button<dark>`
   background-clip: border-box;
   -webkit-background-clip: text;
   color: transparent;
-  animation: ${bg} 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
+
+  @media only screen and (min-width: 960px) {
+    animation: ${bg} 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
+  }
 `;
 
 export const ArtWrapProj = styled.div`
