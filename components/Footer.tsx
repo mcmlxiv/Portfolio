@@ -153,7 +153,7 @@ const Footer = () => {
               <Link href="https://github.com/mcmlxiv">
                 <a
                   tw={
-                    "px-1 cursor-pointer hover:font-semibold hover:text-black"
+                    "pr-1 cursor-pointer hover:font-semibold hover:text-black"
                   }
                 >
                   github

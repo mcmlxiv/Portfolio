@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Link from "next/link";
-import { styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 import {
   portfolioHome,
   RememberTodo,
@@ -18,6 +18,7 @@ import { dark, ThemeContext } from "../types.models";
 import {
   AboutList,
   ArtWrapProj,
+  bg,
   BrowserBack,
   Dot,
   DotBox,
@@ -27,20 +28,17 @@ import Fade from "react-reveal/Fade";
 import YoutubeEmbed from "./YoutubeEmbed";
 
 const WordsMain = styled.div<dark>`
+  ${tw` pb-2`}
+
   will-change: auto;
 
-  ${(p) =>
-    p.darkMode
-      ? `background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-image: url("https://products.ls.graphics/mesh-gradients/images/14.-Prim_1.jpg");
   background-size: 200%;
   background-clip: border-box;
   -webkit-background-clip: text;
   color: transparent;
-  animation: bg 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
-  );`
-      : `
-  );`};
+  animation: ${bg} 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
 `;
 
 const HeroImgProject = () => {
@@ -105,8 +103,7 @@ export const IndexMain = () => {
               " flex flex-col font-semibold  lg:text-8xl text-6xl  min-h-full text-right"
             }
           >
-            My <br />
-            Projects.
+            <WordsMain {...{ darkMode }}>My</WordsMain>Projects.
           </h1>
         </div>
         <div tw={"flex flex-col flex-1"}>

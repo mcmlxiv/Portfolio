@@ -77,16 +77,35 @@ export const ProjectButton = styled.button<dark>`
 
   }`};*/
 }
+
+export const bg = keyframes`0% {
+                       background-position: 5% 5%;
+                     }
+                       25% {
+                         background-position: 5% 95%;
+                         background-size: 250%;
+                       }
+                       50% {
+                         background-position: 95% 95%;
+                         background-size: 150%;
+                       }
+                       75% {
+                         background-position: 5% 95%;
+                       }
+                       100% {
+                         background-position: 5% 5%;
+                       }`;
 export const ProjectAltButton = styled.button<dark>`
-  ${tw`  lg:px-10 lg:py-4 text-sm px-20 py-2 lg:text-lg font-semibold tracking-wider rounded-lg transition duration-300 ease-in-out shadow-sm `}
-
-  width:max-content;
-  background: linear-gradient(#f5f5f7, #d4d4d4);
-
-  color: black;
-  &:hover {
-    background: linear-gradient(#d4d4d9, #d4d4d9);
-  }
+  ${tw`  lg:px-10 lg:py-4 text-sm px-20 py-2 lg:text-lg font-semibold tracking-wider rounded-lg transition duration-300 ease-in-out shadow-sm border-2 dark:border-gray-700 border-white hover:border-blue-400 `}
+  width: max-content;
+  will-change: auto;
+  background-repeat: no-repeat;
+  background-image: url("https://products.ls.graphics/mesh-gradients/images/14.-Prim_1.jpg");
+  background-size: 200%;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: ${bg} 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
 `;
 
 export const ArtWrapProj = styled.div`
