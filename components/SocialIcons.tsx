@@ -42,7 +42,7 @@ const SocialIcons = () => {
           <a>
             <svg
               tw={
-                "fill-current text-gray-400 dark:text-white hover:text-red-600"
+                "fill-current text-gray-400 dark:text-white hover:text-red-400"
               }
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -67,7 +67,9 @@ const SocialIcons = () => {
         <Link href={"https://github.com/mcmlxiv"}>
           <a>
             <svg
-              tw={"fill-current text-gray-400 dark:text-white hover:text-black"}
+              tw={
+                "fill-current text-gray-400 dark:text-white hover:text-gray-400"
+              }
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"

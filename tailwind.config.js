@@ -22,11 +22,6 @@ module.exports = {
       screens: {
         lger: "960px",
       },
-      gradientColorStops: (theme) => ({
-        secondaryBg: "#457B9D",
-        secondaryLighterBg: "#c3dbfa",
-        greyAltBg: "#ededed",
-      }),
       colors: {
         primaryDarker: "#000f33",
         primaryDark: "#00143d",

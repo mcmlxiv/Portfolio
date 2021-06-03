@@ -93,7 +93,7 @@ const Footer = () => {
         <FooterSkills>
           <div>
             <h3>Language</h3>
-            <div tw={"dark:text-gray-200 text-gray-500"}>
+            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
               <h5>TypeScript</h5>
               <h5>JavaScript</h5>
               <h5>HTML</h5>
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
           <div>
             <h3>Frameworks</h3>
-            <div tw={"dark:text-gray-200 text-gray-500"}>
+            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
               <h5>React</h5>
               <h5>NextJs</h5>
               <h5>GatsbyJs</h5>
@@ -117,7 +117,7 @@ const Footer = () => {
           </div>
           <div>
             <h3>Database & Query</h3>
-            <div tw={"dark:text-gray-200 text-gray-500"}>
+            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
               <h5>MongoDB</h5>
               <h5>GraphQL</h5>
               <h5>Rest</h5>
@@ -125,7 +125,7 @@ const Footer = () => {
           </div>
           <div>
             <h3>Services</h3>
-            <div tw={"dark:text-gray-200 text-gray-500"}>
+            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
               <h5>Netlify</h5>
               <h5>Vercel</h5>
               <h5>Heroku</h5>
@@ -136,10 +136,7 @@ const Footer = () => {
           </div>
         </FooterSkills>
         <div tw={"flex flex-1 flex-col w-40 md:max-h-10"}>
-          <div tw={"cursor-pointer my-2  hover:font-semibold"}>
-            <a href="tel:+866 0909 316 039 ">+866 0909 316 039</a>
-          </div>
-          <div tw={"cursor-pointer mb-2  hover:font-semibold"}>
+          <div tw={"cursor-pointer my-1  hover:font-semibold"}>
             <a href="mailto:enpower56@gmail.com">enpower56@gmail.com</a>
           </div>
         </div>

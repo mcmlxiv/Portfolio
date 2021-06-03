@@ -176,11 +176,6 @@ const ContactMain = () => {
           <div
             tw={"py-20  flex flex-1 gap-2 flex-col w-full md:max-h-10 px-10 "}
           >
-            <div tw={"cursor-pointer text-xl hover:font-semibold "}>
-              <Link href="tel:+866 0909 316 039 ">
-                <a>+866 0909 316 039</a>
-              </Link>
-            </div>
             <div tw={"cursor-pointer text-xl hover:font-semibold mb-4"}>
               <Link href="mailto:enpower56@gmail.com">
                 <a>enpower56@gmail.com</a>
