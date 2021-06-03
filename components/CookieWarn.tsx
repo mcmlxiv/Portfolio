@@ -4,7 +4,7 @@ import { openC, ThemeContext } from "../types.models";
 import Fade from "react-reveal/Fade";
 
 const CookieWrapper = styled.section<openC>`
-  ${tw`   flex-1  justify-around items-center bg-gray-300  lg:p-4 p-2 max-h-24 text-black font-light `}
+  ${tw`   flex-1  justify-around lg:justify-center items-center bg-gray-300  lg:p-4 p-2 max-h-24 text-black font-light `}
   grid-column:full-start/full-end;
 
   display: ${({ closeCookie, open }) =>
@@ -19,7 +19,11 @@ const CookieWrapper = styled.section<openC>`
   will-change: transform;
 `;
 const CloseCookie = styled.div`
-  ${tw`   lg:px-8 pr-2 fill-current text-gray-600 hover:text-black cursor-pointer`}
+  ${tw`   lg:px-8 px-2 fill-current text-gray-600 hover:text-black cursor-pointer`};
+
+  @media only screen and (min-width: 960px) {
+    margin-left: 95%;
+  }
 `;
 
 const CookieWarn = () => {
@@ -32,7 +36,7 @@ const CookieWarn = () => {
   return (
     <CookieWrapper {...{ closeCookie, open }}>
       <Fade right when={!open} delay={500} duration={1000}>
-        <div tw={"flex flex-1 items-center justify-center gap-2"}>
+        <div tw={"flex flex-1 items-center justify-center gap-2 xl:mr-52"}>
           <h1>
             This website uses cookies to improve your user experience. By
             continuing to use this website you consent to its use.
