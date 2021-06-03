@@ -18,11 +18,11 @@ export const fadeIn = keyframes`
 `;
 
 export const AboutList = styled.div`
-  ${tw`  flex flex-1 flex-col lg:flex-row justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify my-4 sm:my-8`};
+  ${tw`  flex flex-1 flex-col lg:flex-row justify-center text-justify items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify my-4 sm:my-8`};
 
   width: 100%;
   @media only screen and (min-width: 960px) {
-    width: 60rem;
+    width: 80%;
   }
 `;
 

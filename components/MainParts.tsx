@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Link from "next/link";
-import tw, { styled } from "twin.macro";
+import tw, { styled, css } from "twin.macro";
 import {
   portfolioHome,
   RememberTodo,
@@ -85,12 +85,12 @@ export const IndexMain = () => {
       <Fade bottom>
         <div tw={"flex flex-col flex-1"}>
           <AboutList>
-            <p tw={"mb-4 lg:mb-0 "}>{aboutMe}</p>
+            <p tw={"mb-4 lg:mb-0 lg:mr-10"}>{aboutMe}</p>
             <br />
             <p>{aboutMeCont}</p>
           </AboutList>
           <AboutList>
-            <p tw={"mb-4 lg:mb-0 "}>{aboutMeFinal}</p>
+            <p tw={"mb-4 lg:mb-0 lg:mr-10 "}>{aboutMeFinal}</p>
             <br />
             <p>{aboutMeFinalEnd}</p>
           </AboutList>
@@ -100,16 +100,22 @@ export const IndexMain = () => {
         <div id={"projects"} tw={"my-12 lg:my-16"}>
           <h1
             tw={
-              " flex flex-col font-semibold  lg:text-8xl text-6xl  min-h-full text-right"
+              " flex flex-col font-semibold  lg:text-8xl text-6xl  min-h-full text-right lger:mr-56"
             }
+            css={`
+              @media only screen and (min-width: 960px) {
+                margin-right: 19.4%;
+              }
+            `}
           >
-            <WordsMain {...{ darkMode }}>My</WordsMain>Projects.
+            <WordsMain {...{ darkMode }}>My</WordsMain>
+            Projects.
           </h1>
         </div>
-        <div tw={"flex flex-col flex-1"}>
+        <div tw={"flex flex-col flex-1 text-justify"}>
           <AboutList>
-            <p tw={"text-right mb-4"}>{aboutMeProjects}</p>
-            <p tw={"text-right mb-4"}>{portfolioHome}</p>
+            <p tw={"text-right mb-4 lg:mb-0 lg:mr-10"}>{aboutMeProjects}</p>
+            <p tw={"text-right mb-4 lg:mb-0"}>{portfolioHome}</p>
           </AboutList>
         </div>
       </Fade>

@@ -19,6 +19,9 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      screens: {
+        lger: "960px",
+      },
       gradientColorStops: (theme) => ({
         secondaryBg: "#457B9D",
         secondaryLighterBg: "#c3dbfa",
