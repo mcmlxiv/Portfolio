@@ -100,13 +100,14 @@ export const ProjectAltButton = styled.button<dark>`
   width: max-content;
   will-change: auto;
   background-repeat: no-repeat;
-  background-image: url("https://products.ls.graphics/mesh-gradients/images/14.-Prim_1.jpg");
+  background-image: none;
   background-size: 200%;
   background-clip: border-box;
   -webkit-background-clip: text;
-  color: transparent;
-
+  color: ${(p) => (p.darkMode ? `white` : `black`)};
   @media only screen and (min-width: 960px) {
+    background-image: url("https://products.ls.graphics/mesh-gradients/images/14.-Prim_1.jpg");
+    color: transparent;
     animation: ${bg} 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
   }
 `;
