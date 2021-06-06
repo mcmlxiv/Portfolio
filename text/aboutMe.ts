@@ -35,7 +35,7 @@ export const RememberTodoPurposeCont = `Phase 3 was storing the data and process
 and allowing for the frontend to consume the data from the locally created API. Phase 4 and most difficult was establishing a completely online service where the backend of the app is hosted on Heroku and the frontend on Vercel then connecting the two for a convenient and quick user experience.`;
 
 export const RememberTodoStack = `Using CRA (Create React App) seemed like the clearest choice for this web app. As it is an SPA that utilizes graphQL/Apollo to connect to a hosted MongoDB database. Typescript
- was chosen for its ability to give the project type-safety and to ensure future iterations are more robust and quick. `;
+ was chosen for its ability to give the project type-safety. `;
 export const RememberTodoStackCont = `React hooks, custom hooks, local storage, graphQL and mongooseJS safety features were used throughout the app to maintain a smooth user experience. This allowed 
 for a more robust design. In the future there will be unit test implementations to further push the scope robustness on this app. The apps backend was deployed on Heroku allowing for continuous redeploys
 and updates. The frontend is hosted on  Vercel for it's simplicity, speed and reliability.`;
