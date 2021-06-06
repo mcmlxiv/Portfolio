@@ -20,25 +20,25 @@ interface opens {
 }
 
 const PanelLangauge = styled.div<opens>`
-  ${tw`  dark:text-gray-200 text-gray-500 `}
+  ${tw`  dark:text-gray-200 text-gray-900 `}
   display: ${(p) => (p.panel !== "Language" ? `none` : `block`)};
   overflow: hidden;
 `;
 
 const PanelFramework = styled.div<opens>`
-  ${tw`  dark:text-gray-200 text-gray-500 `}
+  ${tw`  dark:text-gray-200 text-gray-900 `}
   display: ${(p) => (p.panel !== "Framework" ? `none` : `block`)};
   overflow: hidden;
 `;
 
 const PanelDatabase = styled.div<opens>`
-  ${tw`  dark:text-gray-200 text-gray-500 `}
+  ${tw`  dark:text-gray-200 text-gray-900 `}
   display: ${(p) => (p.panel !== "Database" ? `none` : `block`)};
   overflow: hidden;
 `;
 
 const PanelService = styled.div<opens>`
-  ${tw`  dark:text-gray-200 text-gray-500 mb-4 `}
+  ${tw`  dark:text-gray-200 text-gray-900 mb-4 `}
   display: ${(p) => (p.panel !== "Services" ? `none` : `block`)};
   overflow: hidden;
 `;

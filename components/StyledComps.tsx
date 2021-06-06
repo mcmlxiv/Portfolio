@@ -159,10 +159,12 @@ export const HomeContainer = styled.div<dark>`
   font-size: clamp(0.5rem, 0.8rem, 1.5rem);
   display: grid;
   min-height: 100vh;
-  grid-template-rows: minmax(min-content, 20vh) minmax(min-content, 75vh) minmax(
+  grid-template-rows:
+    minmax(min-content, 10vh) minmax(min-content, 40vh) minmax(
       min-content,
-      50vh
-    );
+      75vh
+    )
+    minmax(min-content, 50vh);
   grid-template-columns:
     [full-start]minmax(min-content, 1fr) [center-start] repeat(
       2,

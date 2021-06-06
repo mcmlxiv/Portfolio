@@ -93,7 +93,7 @@ const Footer = () => {
         <FooterSkills>
           <div>
             <h3>Language</h3>
-            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
+            <div tw={"dark:text-gray-200 text-gray-900 mt-2"}>
               <h5>TypeScript</h5>
               <h5>JavaScript</h5>
               <h5>HTML</h5>
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
           <div>
             <h3>Frameworks</h3>
-            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
+            <div tw={"dark:text-gray-200 text-gray-900 mt-2"}>
               <h5>React</h5>
               <h5>NextJs</h5>
               <h5>GatsbyJs</h5>
@@ -117,7 +117,7 @@ const Footer = () => {
           </div>
           <div>
             <h3>Database & Query</h3>
-            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
+            <div tw={"dark:text-gray-200 text-gray-900 mt-2"}>
               <h5>MongoDB</h5>
               <h5>GraphQL</h5>
               <h5>REST/RESTful API</h5>
@@ -125,7 +125,7 @@ const Footer = () => {
           </div>
           <div>
             <h3>Services</h3>
-            <div tw={"dark:text-gray-200 text-gray-500 mt-2"}>
+            <div tw={"dark:text-gray-200 text-gray-900 mt-2"}>
               <h5>Netlify</h5>
               <h5>Vercel</h5>
               <h5>Heroku</h5>

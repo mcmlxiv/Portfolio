@@ -7,7 +7,7 @@ import FullMenu from "./FullMenu";
 import { ThemeContext } from "../types.models";
 
 const NavBarWrapper = styled.div`
-  ${tw`   flex-1 flex flex-col justify-center items-center  xl:px-72 lg:py-10  text-whiteCream `}
+  ${tw`   flex-1 flex flex-col justify-center items-center pb-12 xl:px-72 lg:py-4  text-whiteCream `}
   grid-column:full-start/full-end;
 `;
 
@@ -18,16 +18,18 @@ const Header = ({ part, disabledNav }) => {
     <NavBarWrapper>
       <div
         tw={
-          "w-full h-full px-6 py-4 flex flex-col gap-4 lg:gap-12 overflow-hidden dark:text-white text-black"
+          "w-full h-full px-6 flex flex-col gap-4 lg:gap-12 overflow-hidden dark:text-white text-black"
         }
       >
         <div>
           <header
-            tw={"flex justify-between pb-5 flex-1 items-center overflow-hidden"}
+            tw={
+              "flex justify-between lg:pb-5 flex-1 items-center overflow-hidden"
+            }
           >
             <Link href="/">
               <a>
-                <div tw={"flex flex-1 items-center py-5"}>
+                <div tw={"flex flex-1 items-center lg:py-5"}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="54"
