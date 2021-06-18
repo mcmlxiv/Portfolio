@@ -11,6 +11,7 @@ import {
   ProjectButton,
 } from "./StyledComps";
 import tw, { styled } from "twin.macro";
+import { WordsMain } from "./MainParts";
 
 const smoothScrollToMain = (e: { preventDefault: () => void }) => {
   e.preventDefault();
@@ -126,10 +127,8 @@ export const ProjectHeader = () => {
       </div>
       <div tw={"flex flex-col flex-1 space-y-4"}>
         <p>{aboutMeProjects}</p>
-        <div tw={"flex flex-col flex-1 space-y-8"}>
-          <ProjectAltButton {...{ darkMode }}>
-            LATEST PROJECT BELOW
-          </ProjectAltButton>
+        <div tw={"flex flex-col flex-1 space-y-8 text-2xl"}>
+          <WordsMain {...{ darkMode }}>LATEST PROJECTS BELOW</WordsMain>
         </div>
       </div>
     </div>

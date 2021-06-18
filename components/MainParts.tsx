@@ -20,7 +20,7 @@ import { dark, ThemeContext } from "../types.models";
 import { AboutList, ArtWrapProj, bg, Dot } from "./StyledComps";
 import Fade from "react-reveal/Fade";
 
-const WordsMain = styled.div<dark>`
+export const WordsMain = styled.div<dark>`
   ${tw` pb-2`}
 
   will-change: auto;
