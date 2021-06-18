@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import tw, { styled } from "twin.macro";
 import { openC, ThemeContext } from "../types.models";
 import Fade from "react-reveal/Fade";
+import { bg } from "./StyledComps";
 
 const CookieWrapper = styled.section<openC>`
   ${tw`   flex-1  justify-around lg:justify-center items-center bg-gray-300  lg:p-4 p-2 max-h-24 text-black font-light `}
@@ -16,7 +17,16 @@ const CookieWrapper = styled.section<openC>`
   transition-duration: 0.3s;
   transition-delay: 0.1s;
   transition-timing-function: ease-out;
-  will-change: transform;
+  will-change: auto;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-size: 200%;
+
+  @media only screen and (min-width: 960px) {
+    background-image: url("https://products.ls.graphics/mesh-gradients/images/01.-Royal-Heath.jpg");
+    color: black;
+    animation: ${bg} 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
+  }
 `;
 const CloseCookie = styled.div`
   ${tw`   lg:px-8 px-2 fill-current text-gray-600 hover:text-black cursor-pointer`};
@@ -28,13 +38,13 @@ const CloseCookie = styled.div`
 
 const CookieWarn = () => {
   const [closeCookie, setCloseCookie] = React.useState<boolean>(false);
-  const { open } = useContext(ThemeContext);
+  const { open, darkMode } = useContext(ThemeContext);
 
   const handleCloseCookie = () => {
     setCloseCookie(!closeCookie);
   };
   return (
-    <CookieWrapper {...{ closeCookie, open }}>
+    <CookieWrapper {...{ closeCookie, open, darkMode }}>
       <Fade right when={!open} delay={500} duration={1000}>
         <div tw={"flex flex-1 items-center justify-center gap-2 xl:mr-52"}>
           <h1>

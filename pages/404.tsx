@@ -7,6 +7,7 @@ import Meta from "../components/Meta";
 import { NotFoundHeader } from "../components/HeaderParts";
 import { NotFoundMain } from "../components/MainParts";
 import { NotFoundContainer } from "../components/StyledComps";
+import CookieWarn from "../components/CookieWarn";
 
 const NotFound: React.FC<ThemeProps> = ({
   darkMode,
@@ -28,6 +29,7 @@ const NotFound: React.FC<ThemeProps> = ({
       <NotFoundContainer {...{ darkMode }}>
         <Meta title={"JP - Full-Stack Developer 404 Page Not Found"} />
         <ThemeContext.Provider value={themes}>
+          <CookieWarn />
           <Header part={NotFoundHeader} disabledNav={disabledNav} />
           <Main part={NotFoundMain} />
           <Footer />

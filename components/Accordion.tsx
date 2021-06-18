@@ -125,6 +125,8 @@ const Accordion = () => {
         </AccordionWrap>
         <PanelService {...{ panel }}>
           <h5>Netlify</h5>
+          <h5>GhostCMS</h5>
+          <h5>Contentful</h5>
           <h5>Vercel</h5>
           <h5>Heroku</h5>
           <h5>Adobe XD</h5>

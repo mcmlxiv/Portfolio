@@ -25,7 +25,7 @@ const FullMenu: React.FC<BurgerProps> = ({ disabledNav }) => {
         )}
 
         <ListEle>
-          <Link href="/remembertodo" tw={"py-4 px-16"}>
+          <Link href="/projects" tw={"py-4 px-16"}>
             <a>PROJECTS</a>
           </Link>
           {disabledNav === "project" ? (

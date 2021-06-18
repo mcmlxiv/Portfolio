@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import TypeWriter from "./TypeWriter";
 import { dark, ThemeContext } from "../types.models";
-import { art, contact, notFound } from "../text/aboutMe";
+import { aboutMeProjects, art, contact, notFound } from "../text/aboutMe";
 import Link from "next/link";
 import {
   AboutList,
@@ -108,56 +108,33 @@ export const IndexHeader = () => {
             </div>
 
 
-  export const ProjectHeader = () => {
+
+*/
+}
+
+export const ProjectHeader = () => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
     <div
       tw={
-        "flex flex-col flex-1 items-start gap-4 overflow-hidden dark:text-whiteCream text-black"
+        "flex flex-col flex-1 items-start space-y-4 overflow-hidden dark:text-whiteCream text-black"
       }
     >
       <div>
-        <AboutMeHead>WHAT I'VE BEEN WORKING ON</AboutMeHead>
+        <Head>WHAT I'VE BEEN WORKING ON</Head>
       </div>
-      <div tw={"flex flex-col flex-1 gap-4"}>
+      <div tw={"flex flex-col flex-1 space-y-4"}>
         <p>{aboutMeProjects}</p>
-        <div tw={"flex flex-col flex-1 gap-8"}>
-          <h1>LATEST PROJECT:</h1>
-          <div tw={"flex flex-col flex-1 gap-4"}>
-            <h2>Remember To Do!</h2>
-            <HeroImgProject />
-          </div>
+        <div tw={"flex flex-col flex-1 space-y-8"}>
+          <ProjectAltButton {...{ darkMode }}>
+            LATEST PROJECT BELOW
+          </ProjectAltButton>
         </div>
       </div>
-      <Link href="#main">
-        <a tw={"flex items-center cursor-pointer"}>
-          <div tw={"absolute  bottom-12 animate-bounceSlow"}>
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={darkMode ? "#fff" : "#000"}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-chevrons-down"
-              >
-                <polyline points="7 13 12 18 17 13" />
-                <polyline points="7 6 12 11 17 6" />
-              </svg>
-            </button>
-          </div>
-        </a>
-      </Link>
     </div>
   );
 };
-*/
-}
 
 export const ContactHeader = () => {
   const { darkMode } = useContext(ThemeContext);

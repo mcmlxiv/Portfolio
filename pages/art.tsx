@@ -7,6 +7,7 @@ import { ArtMain } from "../components/MainParts";
 import MainWrapperArt from "../components/MainWrapperArt";
 import { ThemeContext, ThemeProps } from "../types.models";
 import { ArtContainer } from "../components/StyledComps";
+import CookieWarn from "../components/CookieWarn";
 
 const Art: React.FC<ThemeProps> = ({
   darkMode,
@@ -28,6 +29,7 @@ const Art: React.FC<ThemeProps> = ({
       <ArtContainer {...{ darkMode }}>
         <Meta title={"JP - Full-Stack Developer Art"} />
         <ThemeContext.Provider value={themes}>
+          <CookieWarn />
           <Header part={ArtHeader} disabledNav={disabledNav} />
           <MainWrapperArt part={ArtMain} />
           <Footer />

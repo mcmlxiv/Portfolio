@@ -76,7 +76,7 @@ const Menu: React.FC<BurgerProps> = ({ open, disabledNav, toggleSetOpen }) => {
         </Fade>
         <Fade right when={open} delay={550} duration={1000}>
           <li tw={"my-8 px-16"} onClick={toggleSetOpen}>
-            <Link href="/remembertodo">
+            <Link href="/projects">
               {disabledNav === "project" ? (
                 <p tw={"text-gray-500 "}>PROJECTS</p>
               ) : (

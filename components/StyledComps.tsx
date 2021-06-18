@@ -131,10 +131,12 @@ export const ContactContainer = styled.div<dark>`
   font-size: clamp(0.5rem, 0.8rem, 1.5rem);
   display: grid;
   min-height: 100vh;
-  grid-template-rows: minmax(min-content, 20vh) minmax(min-content, 75vh) minmax(
+  grid-template-rows:
+    minmax(min-content, 10vh) minmax(min-content, 20vh) minmax(
       min-content,
-      50vh
-    );
+      75vh
+    )
+    minmax(min-content, max-content);
   grid-template-columns:
     [full-start]minmax(min-content, 1fr) [center-start] repeat(
       2,
@@ -144,13 +146,39 @@ export const ContactContainer = styled.div<dark>`
   font-family: "Montserrat", serif;
   letter-spacing: 0.025rem;
   @media only screen and (min-width: 960px) {
-    grid-template-rows: minmax(min-content, 20vh) minmax(min-content, 75vh) minmax(
-        min-content,
-        60vh
-      );
+    grid-template-rows:
+      min-content minmax(min-content, 20vh) minmax(min-content, 75vh)
+      minmax(min-content, max-content);
   }
 `;
 
+export const ArtContainer = styled.div<dark>`
+  ${tw` font-semibold`}
+  background-color: ${(p) => (p.darkMode ? `black` : `white`)};
+  overflow: hidden;
+  font-size: clamp(0.5rem, 0.8rem, 1.5rem);
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows:
+    minmax(min-content, 10vh) minmax(min-content, 20vh) minmax(
+      min-content,
+      75vh
+    )
+    minmax(min-content, max-content);
+  grid-template-columns:
+    [full-start]minmax(min-content, 1fr) [center-start] repeat(
+      2,
+      [col-start] minmax(min-content, 48rem) [col-end]
+    )
+    [center-end] minmax(min-content, 1fr) [full-end];
+  font-family: "Montserrat", serif;
+  letter-spacing: 0.025rem;
+  @media only screen and (min-width: 960px) {
+    grid-template-rows:
+      min-content minmax(min-content, 20vh) minmax(min-content, 75vh)
+      minmax(min-content, max-content);
+  }
+`;
 export const HomeContainer = styled.div<dark>`
   ${tw` font-semibold`}
 
@@ -164,7 +192,7 @@ export const HomeContainer = styled.div<dark>`
       min-content,
       75vh
     )
-    minmax(min-content, 50vh);
+    minmax(min-content, max-content);
   grid-template-columns:
     [full-start]minmax(min-content, 1fr) [center-start] repeat(
       2,
@@ -176,35 +204,7 @@ export const HomeContainer = styled.div<dark>`
   @media only screen and (min-width: 960px) {
     grid-template-rows:
       min-content minmax(min-content, 20vh) minmax(min-content, 75vh)
-      minmax(min-content, 60vh);
-  }
-`;
-
-export const ArtContainer = styled.div<dark>`
-  ${tw` font-semibold`}
-
-  background-color: ${(p) => (p.darkMode ? `black` : `white`)};
-  overflow: hidden;
-  font-size: clamp(0.5rem, 0.8rem, 1.5rem);
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: minmax(min-content, 20vh) minmax(min-content, 75vh) minmax(
-      min-content,
-      50vh
-    );
-  grid-template-columns:
-    [full-start]minmax(min-content, 1fr) [center-start] repeat(
-      2,
-      [col-start] minmax(min-content, 48rem) [col-end]
-    )
-    [center-end] minmax(min-content, 1fr) [full-end];
-  font-family: "Montserrat", serif;
-  letter-spacing: 0.025rem;
-  @media only screen and (min-width: 960px) {
-    grid-template-rows: minmax(min-content, 20vh) minmax(min-content, 75vh) minmax(
-        min-content,
-        60vh
-      );
+      minmax(min-content, max-content);
   }
 `;
 
@@ -216,10 +216,12 @@ export const RememberContainer = styled.div<dark>`
   font-size: clamp(0.5rem, 0.8rem, 1.5rem);
   display: grid;
   min-height: 100vh;
-  grid-template-rows: minmax(min-content, 100vh) minmax(min-content, 75vh) minmax(
+  grid-template-rows:
+    minmax(min-content, 10vh) minmax(min-content, 100vh) minmax(
       min-content,
-      50vh
-    );
+      75vh
+    )
+    minmax(min-content, max-content);
   grid-template-columns:
     [full-start]minmax(1.5rem, 1fr) [center-start] repeat(
       2,
@@ -235,10 +237,9 @@ export const RememberContainer = styled.div<dark>`
         [col-start]minmax(min-content, 48rem) [col-end]
       )
       [center-end] minmax(20rem, 1fr) [full-end];
-    grid-template-rows: minmax(min-content, 100vh) minmax(min-content, 75vh) minmax(
-        min-content,
-        60vh
-      );
+    grid-template-rows:
+      min-content minmax(min-content, 100vh) minmax(min-content, 75vh)
+      minmax(min-content, max-content);
   }
 `;
 
@@ -367,5 +368,22 @@ export const NotFoundContainer = styled.div<dark>`
         min-content,
         60vh
       );
+  }
+`;
+
+export const HeroWrapRemember = styled.div`
+  ${tw` relative rounded py-12 `};
+  filter: drop-shadow(4px 2px 10px #a3a3a2);
+  width: 100%;
+  height: 100%;
+
+  min-width: 90%;
+  min-height: 90%;
+
+  @media only screen and (min-width: 960px) {
+    width: 80%;
+    height: 80%;
+    padding-left: 0;
+    transform: translateX(10px);
   }
 `;

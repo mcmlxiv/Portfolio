@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Link from "next/link";
-import tw, { styled, css } from "twin.macro";
+import tw, { styled } from "twin.macro";
 import {
   portfolioHome,
   RememberTodo,
@@ -9,23 +9,16 @@ import {
   aboutMeFinal,
   aboutMeFinalEnd,
   aboutMeProjects,
+  Starbucks,
+  Blog,
 } from "../text/aboutMe";
-import { url } from "./HeroImg";
+import { url, urlBlogFront, urlStoreFront } from "./HeroImg";
 import Image from "next/image";
 import styles from "../styles/Image.module.css";
 import { buildUrl } from "cloudinary-build-url";
 import { dark, ThemeContext } from "../types.models";
-import {
-  AboutList,
-  ArtWrapProj,
-  bg,
-  BrowserBack,
-  Dot,
-  DotBox,
-  HeroWrapProj,
-} from "./StyledComps";
+import { AboutList, ArtWrapProj, bg, Dot } from "./StyledComps";
 import Fade from "react-reveal/Fade";
-import YoutubeEmbed from "./YoutubeEmbed";
 
 const WordsMain = styled.div<dark>`
   ${tw` pb-2`}
@@ -41,31 +34,6 @@ const WordsMain = styled.div<dark>`
   animation: ${bg} 8s cubic-bezier(0.77, 0, 0.175, 1) 2s infinite;
 `;
 
-const HeroImgProject = () => {
-  return (
-    <HeroWrapProj>
-      <Link href={"https://remembertodo.vercel.app/"}>
-        <a>
-          <Image
-            tw={"z-5 "}
-            src={url}
-            alt="RememberTodo"
-            width="1920"
-            height="1080"
-            layout="responsive"
-            className={styles.image}
-          />
-        </a>
-      </Link>
-      <BrowserBack>
-        <DotBox>
-          <Dot tw={"hover:bg-red-700"} />
-          <Dot tw={"hover:bg-green-700"} />
-        </DotBox>
-      </BrowserBack>
-    </HeroWrapProj>
-  );
-};
 export const IndexMain = () => {
   const { darkMode } = useContext(ThemeContext);
 
@@ -121,117 +89,198 @@ export const IndexMain = () => {
       </Fade>
       <Fade bottom>
         <div tw={"flex flex-col flex-1 my-4 lg:my-10"}>
-          <Link href="/remembertodo">
-            <a>
-              <h3 tw={"text-lg  font-semibold   lg:text-4xl min-h-full  "}>
-                Remember Todo!
-              </h3>
-            </a>
-          </Link>
-          <HeroImgProject />
-          <YoutubeEmbed embedID={"lU3gMB7j6E4"} />
-          <div
-            tw={
-              "justify-center items-center lg:text-lg font-medium dark:text-gray-200 text-gray-500 text-justify md:w-3/4 w-full my-8"
-            }
-          >
-            <p>{RememberTodo}</p>
-          </div>
-          <Link href="/remembertodo">
-            <a
-              tw={
-                "flex items-center cursor-pointer overflow-hidden font-medium  hover:font-semibold w-52 not-italic "
-              }
-            >
-              <h4 tw={"text-lg min-h-full  "}>VIEW PROJECT</h4>
-              <div tw={"px-4"}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  display="block"
-                  id="ChevronRight"
-                >
-                  <path d="M8 4l8 8-8 8" />
-                </svg>
-              </div>
-            </a>
-          </Link>
+          <ProjectMain />
         </div>
       </Fade>
     </div>
   );
 };
 
-//For Later
-{
-  /*export const ProjectMain = () => {
+export const ProjectMain = () => {
   return (
     <div>
       <h1 tw={"font-semibold text-2xl mt-4"}>PROJECTS</h1>
-      <div tw={"py-9 flex flex-col flex-1 gap-4 "} className={"first"}>
+      <div tw={"py-9 flex flex-col flex-1 space-y-6  "} className={"first"}>
         <div
           tw={
-            "rounded-md shadow-lg py-8  px-5 w-full dark:bg-secondaryLighter dark:bg-opacity-25  bg-white"
+            "flex flex-1 flex-col lger:flex-row space-y-6 lger:space-y-0 lger:space-x-6"
           }
         >
-          <div>
+          <div
+            className="group"
+            tw={
+              "rounded-md shadow-lg py-8  px-5 w-80 sm:w-96 dark:bg-gray-200 dark:bg-opacity-25  bg-white transition duration-300 transform hover:scale-105 dark:hover:bg-opacity-40 "
+            }
+          >
             <div>
-              <Link href="/projects/remembertodo">
-                <a tw={"flex items-center cursor-pointer"}>
-                  <h2> Remember To Do!</h2>
-                  <div tw={"px-4"}>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      display="block"
-                      id="ChevronRight"
-                    >
-                      <path d="M8 4l8 8-8 8" />
-                    </svg>
-                  </div>
-                </a>
-              </Link>
-
-              <p tw={"py-1 leading-relaxed tracking-wider font-medium"}>
-                {RememberTodo}
-              </p>
-              <h3 tw={"text-green-500 flex gap-1 items-center py-1 "}>
-                <Dot
-                  tw={"animate-ping bg-green-300 transform -translate-y-1"}
-                />
-                Live
-              </h3>
-
               <div>
-                <a
-                  href="/projects/remembertodo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    tw={"z-50 "}
-                    src={url}
-                    alt="Project"
-                    width="1920"
-                    height="1080"
-                    layout="responsive"
-                    className={styles.image}
+                <Link href="/projects/remembertodo">
+                  <a tw={"flex items-center cursor-pointer"}>
+                    <h2> Remember To Do!</h2>
+                    <div tw={"px-4"}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        display="block"
+                        id="ChevronRight"
+                      >
+                        <path d="M8 4l8 8-8 8" />
+                      </svg>
+                    </div>
+                  </a>
+                </Link>
+
+                <p tw={"py-1 leading-relaxed tracking-wider font-medium"}>
+                  {RememberTodo}
+                </p>
+                <h3 tw={"text-green-500 flex gap-1 items-center py-1 "}>
+                  <Dot
+                    tw={"animate-ping bg-green-300 transform -translate-y-1"}
                   />
-                </a>
+                  Live
+                </h3>
+
+                <div>
+                  <a href="/projects/remembertodo">
+                    <Image
+                      tw={"z-50 "}
+                      src={url}
+                      alt="Project"
+                      width="1920"
+                      height="1080"
+                      layout="responsive"
+                      className={styles.image}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="group"
+            tw={
+              "rounded-md shadow-lg py-8  px-5 w-80 sm:w-96 dark:bg-gray-200 dark:bg-opacity-25  bg-white  transition duration-300 transform hover:scale-105 dark:hover:bg-opacity-40 "
+            }
+          >
+            <div>
+              <div>
+                <Link href="/projects/ecommerce">
+                  <a tw={"flex items-center cursor-pointer"}>
+                    <h2> Starbucks Ecommerce Clone</h2>
+                    <div tw={"px-4"}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        display="block"
+                        id="ChevronRight"
+                      >
+                        <path d="M8 4l8 8-8 8" />
+                      </svg>
+                    </div>
+                  </a>
+                </Link>
+
+                <p tw={"py-1 leading-relaxed tracking-wider font-medium"}>
+                  {Starbucks}
+                </p>
+                <h3 tw={"text-green-500 flex gap-1 items-center py-1 "}>
+                  <Dot
+                    tw={"animate-ping bg-green-300 transform -translate-y-1"}
+                  />
+                  Live
+                </h3>
+
+                <div>
+                  <a href="/projects/ecommerce">
+                    <Image
+                      tw={"z-50 "}
+                      src={urlStoreFront}
+                      alt="Project"
+                      width="1920"
+                      height="1080"
+                      layout="responsive"
+                      className={styles.image}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          tw={
+            "flex flex-1 flex-col lger:flex-row space-y-4 lger:space-y-0 lger:space-x-4"
+          }
+        >
+          <div
+            className="group"
+            tw={
+              "rounded-md shadow-lg py-8  px-5 w-80 sm:w-96 dark:bg-gray-200 dark:bg-opacity-25  bg-white transition duration-300 transform hover:scale-105 dark:hover:bg-opacity-40  "
+            }
+          >
+            <div>
+              <div>
+                <Link href="/projects/blog">
+                  <a tw={"flex items-center cursor-pointer"}>
+                    <h2> NextJS GhostCMS Blog</h2>
+                    <div tw={"px-4"}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        display="block"
+                        id="ChevronRight"
+                      >
+                        <path d="M8 4l8 8-8 8" />
+                      </svg>
+                    </div>
+                  </a>
+                </Link>
+
+                <p tw={"py-1 leading-relaxed tracking-wider font-medium"}>
+                  {Blog}
+                </p>
+                <h3 tw={"text-green-500 flex gap-1 items-center py-1 "}>
+                  <Dot
+                    tw={"animate-ping bg-green-300 transform -translate-y-1"}
+                  />
+                  Live
+                </h3>
+
+                <div>
+                  <a href="/projects/blog">
+                    <Image
+                      tw={"z-50 "}
+                      src={urlBlogFront}
+                      alt="Project"
+                      width="1920"
+                      height="1080"
+                      layout="responsive"
+                      className={styles.image}
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -240,7 +289,70 @@ export const IndexMain = () => {
     </div>
   );
 };
-*/
+
+{
+  /* <div>
+          <div
+            tw={
+              "rounded-md shadow-lg py-8  px-5 w-96 dark:bg-secondaryLighter dark:bg-opacity-25  bg-white"
+            }
+          >
+            <div>
+              <div>
+                <Link href="/projects/remembertodo">
+                  <a tw={"flex items-center cursor-pointer"}>
+                    <h2> NextJS GhostCMS Blog</h2>
+                    <div tw={"px-4"}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        display="block"
+                        id="ChevronRight"
+                      >
+                        <path d="M8 4l8 8-8 8" />
+                      </svg>
+                    </div>
+                  </a>
+                </Link>
+
+                <p tw={"py-1 leading-relaxed tracking-wider font-medium"}>
+                  {Blog}
+                </p>
+                <h3 tw={"text-green-500 flex gap-1 items-center py-1 "}>
+                  <Dot
+                    tw={"animate-ping bg-green-300 transform -translate-y-1"}
+                  />
+                  Live
+                </h3>
+
+                <div>
+                  <a
+                    href="/projects/remembertodo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      tw={"z-50 "}
+                      src={urlBlogFront}
+                      alt="Project"
+                      width="1920"
+                      height="1080"
+                      layout="responsive"
+                      className={styles.image}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>*/
 }
 
 const publicIds = [

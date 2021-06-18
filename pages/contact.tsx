@@ -10,6 +10,7 @@ import Link from "next/link";
 import SocialIcons from "../components/SocialIcons";
 import Fade from "react-reveal/Fade";
 import { ContactContainer } from "../components/StyledComps";
+import CookieWarn from "../components/CookieWarn";
 
 const Contact: React.FC<ThemeProps> = ({
   darkMode,
@@ -31,6 +32,7 @@ const Contact: React.FC<ThemeProps> = ({
       <ContactContainer {...{ darkMode }}>
         <Meta title={"JP - Full-Stack Developer Contact"} />
         <ThemeContext.Provider value={themes}>
+          <CookieWarn />
           <Header part={ContactHeader} disabledNav={disabledNav} />
           <ContactMainWrap part={ContactMain} />
           <Footer />
@@ -177,8 +179,8 @@ const ContactMain = () => {
             tw={"py-20  flex flex-1 gap-2 flex-col w-full md:max-h-10 px-10 "}
           >
             <div tw={"cursor-pointer text-xl hover:font-semibold mb-4"}>
-              <Link href="mailto:enpower56@gmail.com">
-                <a>enpower56@gmail.com</a>
+              <Link href="mailto:mcmlxiv512@gmail.com">
+                <a>mcmlxiv512@gmail.com</a>
               </Link>
             </div>
             <SocialIcons />

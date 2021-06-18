@@ -1,41 +1,34 @@
 import React from "react";
 import tw, { styled } from "twin.macro";
-import Main from "../components/Main";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import { ThemeContext, ThemeProps } from "../types.models";
+import Main from "../../components/Main";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { ThemeContext, ThemeProps } from "../../types.models";
 
-import Meta from "../components/Meta";
+import Meta from "../../components/Meta";
 import Fade from "react-reveal/Fade";
-
 import {
-  RememberTodoLessons,
-  RememberTodoLessonsCont,
-  RememberTodoProblems,
-  RememberTodoProblemsCont,
-  RememberTodoProject,
-  RememberTodoProjectCont,
-  RememberTodoPurpose,
-  RememberTodoPurposeCont,
-  RememberTodoStack,
-  RememberTodoStackCont,
-} from "../text/aboutMe";
-import { HeroImgMockUp, url } from "../components/HeroImg";
-import { Dot } from "../components/StyledComps";
-
+  BlogLessons,
+  BlogProblems,
+  BlogProblemsCont,
+  BlogProject,
+  BlogProjectCont,
+  BlogPurpose,
+  BlogPurposeCont,
+  BlogStack,
+} from "../../text/aboutMe";
+import {
+  HeroImgProject,
+  HeroImgRemember,
+  urlBlogFront,
+  urlBlogPage,
+} from "../../components/HeroImg";
+import { Dot } from "../../components/StyledComps";
 import { keyframes } from "styled-components";
-
-import { DiMongodb, DiReact, DiNodejs } from "react-icons/di";
-import {
-  SiGraphql,
-  SiApollographql,
-  SiMaterialUi,
-  SiHeroku,
-} from "react-icons/si";
-import { RememberContainer } from "../components/StyledComps";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/Image.module.css";
+import { DiGhost, DiReact } from "react-icons/di";
+import { SiNextDotJs } from "react-icons/si";
+import { RememberContainer } from "../../components/StyledComps";
+import CookieWarn from "../../components/CookieWarn";
 
 const fadeIn = keyframes`
   from{
@@ -64,43 +57,8 @@ const AboutList = styled.div`
     width: 60rem;
   }
 `;
-const HeroWrapRemember = styled.div`
-  ${tw` relative rounded py-12 `};
-  filter: drop-shadow(4px 2px 10px #a3a3a2);
-  width: 100%;
-  height: 100%;
-  padding-left: 1rem;
-  min-width: 90%;
-  min-height: 90%;
 
-  @media only screen and (min-width: 960px) {
-    width: 80%;
-    height: 80%;
-    padding-left: 0;
-  }
-`;
-
-const HeroImgRemember = () => {
-  return (
-    <HeroWrapRemember>
-      <Link href={"https://remembertodo.vercel.app/"}>
-        <a tw={" shadow-2xl"}>
-          <Image
-            tw={"z-5 "}
-            src={url}
-            alt="RememberTodo"
-            width="1920"
-            height="1080"
-            layout="responsive"
-            className={styles.image}
-          />
-        </a>
-      </Link>
-    </HeroWrapRemember>
-  );
-};
-
-const RememberTodo: React.FC<ThemeProps> = ({
+const Blog: React.FC<ThemeProps> = ({
   darkMode,
   toggleDarkMode,
   toggleSetOpen,
@@ -121,15 +79,15 @@ const RememberTodo: React.FC<ThemeProps> = ({
       >
         <div tw={"mb-4"}>
           <HeaderR>
-            Remember
+            NextJS GhostCMS
             <br />
-            ToDo!
+            Blog
           </HeaderR>
         </div>
         <Fade bottom>
           <AboutList>
-            <p tw={"mb-4 lg:mb-0"}>{RememberTodoProject}</p>
-            <p>{RememberTodoProjectCont}</p>
+            <p tw={"mb-4 lg:mb-0"}>{BlogProject}</p>
+            <p>{BlogProjectCont}</p>
           </AboutList>
         </Fade>
         <Fade bottom>
@@ -143,13 +101,11 @@ const RememberTodo: React.FC<ThemeProps> = ({
             <div tw={"mx-6"}>
               <h3 tw={"lg:text-xl"}>Stack</h3>
               <div tw={"dark:text-gray-200 text-gray-500 leading-loose"}>
-                <h5>TypeScript</h5>
                 <h5>React</h5>
-                <h5>GraphQL/Apollo</h5>
+                <h5>Redux</h5>
                 <h5>MaterialUI</h5>
-                <h5>MongoDB/Mongoose</h5>
-                <h5>Express</h5>
-                <h5>Heroku</h5>
+                <h5>Firebase</h5>
+                <h5>Framer-Motion</h5>
                 <h5>Vercel</h5>
               </div>
             </div>
@@ -166,7 +122,7 @@ const RememberTodo: React.FC<ThemeProps> = ({
               </h3>
               <div tw={"dark:text-gray-200 text-gray-500"}>
                 <div tw={"font-semibold mt-4 cursor-pointer"}>
-                  <a href="https://remembertodo.vercel.app/">
+                  <a href="https://mcmlxivBlog.vercel.app/">
                     <h5>Go to App!</h5>
                   </a>
                 </div>
@@ -174,7 +130,8 @@ const RememberTodo: React.FC<ThemeProps> = ({
             </div>
           </div>
         </Fade>
-        <HeroImgRemember />
+
+        <HeroImgProject url={urlBlogFront} />
       </div>
     );
   };
@@ -199,8 +156,8 @@ const RememberTodo: React.FC<ThemeProps> = ({
         <Fade bottom>
           <div tw={"flex flex-col flex-1 "}>
             <AboutList>
-              <p tw={"mb-4 lg:mb-0"}>{RememberTodoPurpose}</p>
-              <p>{RememberTodoPurposeCont}</p>
+              <p tw={"mb-4 lg:mb-0"}>{BlogPurpose}</p>
+              <p>{BlogPurposeCont}</p>
             </AboutList>
           </div>
         </Fade>
@@ -218,24 +175,17 @@ const RememberTodo: React.FC<ThemeProps> = ({
         <Fade bottom>
           <div tw={"flex flex-col flex-1 gap-8"}>
             <div tw={"flex flex-1 justify-between text-2xl lg:text-6xl my-4"}>
-              <DiMongodb />
               <DiReact />
-              <DiNodejs />
-              <SiGraphql />
-              <SiApollographql />
-              <SiHeroku />
-              <SiMaterialUi />
+              <DiGhost />
+              <SiNextDotJs />
             </div>
             <AboutList>
-              <p tw={"my-4 "}>{RememberTodoStack}</p>
-            </AboutList>
-            <AboutList>
-              <p>{RememberTodoStackCont}</p>
+              <p tw={"my-4 "}>{BlogStack}</p>
             </AboutList>
           </div>
         </Fade>
         <Fade bottom>
-          <HeroImgMockUp />
+          <HeroImgRemember url={urlBlogPage} />
         </Fade>
         <Fade bottom>
           <div>
@@ -249,10 +199,10 @@ const RememberTodo: React.FC<ThemeProps> = ({
           </div>
           <div tw={"flex flex-col flex-1 "}>
             <AboutList>
-              <p tw={"my-4"}>{RememberTodoProblems}</p>
+              <p tw={"my-4"}>{BlogProblems}</p>
             </AboutList>
             <AboutList>
-              <p>{RememberTodoProblemsCont}</p>
+              <p>{BlogProblemsCont}</p>
             </AboutList>
           </div>
         </Fade>
@@ -268,8 +218,7 @@ const RememberTodo: React.FC<ThemeProps> = ({
           </div>
           <div tw={"flex flex-col flex-1 gap-8"}>
             <AboutList>
-              <p tw={"mt-4 mb-4 lg:mb-0"}>{RememberTodoLessons}</p>
-              <p>{RememberTodoLessonsCont}</p>
+              <p tw={"mt-4 mb-4 lg:mb-0"}>{BlogLessons}</p>
             </AboutList>
           </div>
         </Fade>
@@ -280,8 +229,9 @@ const RememberTodo: React.FC<ThemeProps> = ({
   return (
     <>
       <RememberContainer {...{ darkMode }}>
-        <Meta title={"JP - Full-Stack Developer RememberToDo"} />
+        <Meta title={"JP - Full-Stack Developer Ecommerce"} />
         <ThemeContext.Provider value={themes}>
+          <CookieWarn />
           <Header part={RememberHeader} disabledNav={disabledNav} />
           <Main part={RememberMain} />
           <Footer />
@@ -291,4 +241,4 @@ const RememberTodo: React.FC<ThemeProps> = ({
   );
 };
 
-export default RememberTodo;
+export default Blog;

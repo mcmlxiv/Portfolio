@@ -127,6 +127,8 @@ const Footer = () => {
             <h3>Services</h3>
             <div tw={"dark:text-gray-200 text-gray-900 mt-2"}>
               <h5>Netlify</h5>
+              <h5>GhostCMS</h5>
+              <h5>Contentful</h5>
               <h5>Vercel</h5>
               <h5>Heroku</h5>
               <h5>Adobe XD</h5>
@@ -138,7 +140,7 @@ const Footer = () => {
         </FooterSkills>
         <div tw={"flex flex-1 flex-col w-40 md:max-h-10"}>
           <div tw={"cursor-pointer my-1  hover:font-semibold"}>
-            <a href="mailto:enpower56@gmail.com">enpower56@gmail.com</a>
+            <a href="mailto:mcmlxiv512@gmail.com">mcmlxiv512@gmail.com</a>
           </div>
         </div>
         <FooterBase>
@@ -163,7 +165,7 @@ const Footer = () => {
             </FooterListEle>
             <FooterListEle>
               <a
-                href="https://www.linkedin.com/in/majid-popo-400291213"
+                href="https://www.linkedin.com/in/%E6%B3%A2%E5%90%89%E5%BE%B7-majid-john-junior-popo-400291213/"
                 tw={
                   "px-1 cursor-pointer hover:font-semibold hover:text-blue-600"
                 }
