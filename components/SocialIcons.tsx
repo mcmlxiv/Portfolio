@@ -14,7 +14,7 @@ const SocialIcons = () => {
       <span tw={"px-2"}>
         <Link
           href={
-            "https://www.linkedin.com/in/%E6%B3%A2%E5%90%89%E5%BE%B7-majid-john-junior-popo-400291213/"
+            "https://www.linkedin.com/in/john-p-400291213/"
           }
         >
           <a>
